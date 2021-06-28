@@ -11,16 +11,16 @@ function NavBar() {
     return (
         <Nav justify variant="tabs" className="jobNavbar flex-column">
             <Row>
-                <Nav.Link href="#">Dashboard</Nav.Link>
+                <Nav.Link href="#'">Dashboard</Nav.Link>
             </Row>
             <Row>
-                <Nav.Link href="#">Jobs</Nav.Link>               
+                <Nav.Link href="/jobs">Jobs</Nav.Link>               
             </Row>
             <Row>
-                <Nav.Link href="#">Calendar</Nav.Link>    
+                <Nav.Link href="/todo">To Do List</Nav.Link>    
             </Row>
             <Row>
-                <Nav.Link href="#">To Do List</Nav.Link>    
+                <Nav.Link href="#">Analytics</Nav.Link>    
             </Row>
         </Nav>
     )
