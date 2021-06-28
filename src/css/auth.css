@@ -1,0 +1,73 @@
+.authButton {
+    background-color: #540D6E;
+    color: white;
+    padding: .5rem;
+    margin: .5rem;
+    width: 40%;
+    border-radius: .5rem;
+    cursor:pointer;
+}
+
+.authButton:hover {
+    color:#540D6E;
+    background-color: white;
+    border: 1px solid #540D6E;
+    transition: .5s ease;
+}
+.authForm {
+    place-items: center;
+    display:flex;
+    flex-direction: column;
+    width:80%;
+}
+
+.authUsernameGroup {
+    width: 100%;
+}
+
+.authUsernameControl {
+    width: 100%;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.authEmailGroup {
+    width: 100%;
+}
+
+.authEmailControl {
+    width: 100%;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.authPasswordGroup {
+    width: 100%;
+}
+
+.authPasswordControl {
+    width: 100%;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.authContainer {
+    width: 50vw;
+    margin-left: 50vw;
+}
+
+
+.authContainer.hidden {
+    display: hidden;
+} 
+
+#authForgotPassword {
+    color:black;
+}
+
+#authForgotPassword:hover {
+    color:#540D6E;
+    text-decoration: underline;
+    cursor: pointer;
+}
+

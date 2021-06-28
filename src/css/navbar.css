@@ -1,0 +1,52 @@
+.navbarContainer {
+    width:95%;
+    margin: 10 auto;
+}
+
+.jobCard {
+    width: 90%;
+    background-color: aqua;
+    margin-top: 2.7rem;
+}
+
+.jobDetails {
+    width: 15vw;
+}
+
+.jobColOne {
+    border: 2px solid grey;
+    padding-right: .5rem;
+    padding-left: 1rem;
+    box-shadow: -5px 0px 10px grey;
+    height: 80vh;
+    overflow: scroll;
+}
+
+.jobColTwo {
+    height:80vh;
+    border: 2px solid grey;
+    overflow: scroll;
+}
+
+.applyButtons {
+    background-color: #86BBD8;
+    border-color: #86BBD8;
+}
+
+.jobDescription {
+    white-space: pre-wrap;
+    text-overflow:hidden;
+    overflow: scroll;
+    height: 49vh;
+
+}
+
+.jobNavbar {
+    height: 80vh;
+    justify-content: space-evenly;
+}
+
+.jobSearch {
+    justify-content: space-evenly;
+    align-items: right;
+}
