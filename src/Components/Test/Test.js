@@ -9,7 +9,7 @@ import DashBoardPortal  from "../Dashboard/DashBoardPortal";
 export default function Test() {
     return (
         <div>
-           <DashBoardPortal />
+          
         </div>
     )
 }
