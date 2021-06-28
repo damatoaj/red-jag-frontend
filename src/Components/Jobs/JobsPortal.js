@@ -5,7 +5,7 @@ import '../../css/navbar.css';
 //import dummy data
 import jobs from './dummyData';
 //import components
-import NavBar from './NavBar';
+import NavBar from '../Dashboard/DashBoardNav';
 import Search from './Search';
 import JobTable from './JobTable';
 import JobDetails from './JobDetails';
@@ -37,9 +37,6 @@ export default function NavbarPortal() {
             <Search setJobQuery={setJobQuery} />
           </Row>
           <Row>
-            <Col>
-              <NavBar />
-            </Col>
             <Col className="jobColOne">
               <Row>
                 <h1>Job Openings</h1>
