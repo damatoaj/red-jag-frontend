@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../Images/Group 32.jpg";
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import styled from "@emotion/styled";
+import { Link } from 'react-router-dom';
 
 const StyledHeader = styled.div`
   display: flex;
@@ -34,10 +35,10 @@ function DefaultHeader() {
             <Nav.Link href="about">About</Nav.Link>
             <Nav.Link href="contact">Contact</Nav.Link>
 
-            <Nav.Link eventKey={2} href="signin">
+            <Link eventKey={2} to="/signin">
               {/* <button>Sign In</button> */}
               <StyledButton>Sign In</StyledButton>
-            </Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

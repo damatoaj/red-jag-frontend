@@ -8,10 +8,14 @@ import LandingPortal from "../Landing/LandingPortal";
 import TodoPortal from "../Todo/TodoPortal";
 import DefaultHeader from "../Header/DefaultHeader";
 import DashBoardPortal  from "../Dashboard/DashBoardPortal";
+import HeaderPortal from "../Header/HeaderPortal";
+
 export default function Test() {
     return (
-        <div>
-          
-        </div>
+        <Router>
+          <HeaderPortal />
+          <LandingPortal />
+            <DashBoardPortal />
+        </Router>
     )
 }

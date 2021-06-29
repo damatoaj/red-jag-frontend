@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route } from 'react-router-dom';
 
 //Import components
 import Container from 'react-bootstrap/Container';
@@ -10,7 +11,7 @@ import Button from 'react-bootstrap/Button';
 import HeaderIllustration from '../../Images/LandingPage/HeaderIllustration.svg';
 
 
-function DefaultLanding() {
+function DefaultLanding({AuthPortal}) {
     return (
         <Container id="landingContainer" fluid={true}>
                 <Col lg='6' md='6' sm='6' id="landingColumnLeft">
@@ -31,6 +32,13 @@ function DefaultLanding() {
                 </Col>
                 <Col lg='6' md='6' sm='6'>
                     <Image id="landingImage" src={HeaderIllustration} />
+                    <Route 
+                        path="/signin"
+                        render={() => {
+                            return <AuthPortal />
+                        }}
+                    />
+
                 </Col>
         </Container>
     )
