@@ -1,9 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 import { 
     Nav,
-    Col,
-    Row,
+    Row
 
  } from 'react-bootstrap/';
 
@@ -11,16 +11,13 @@ function NavBar() {
     return (
         <Nav justify variant="tabs" className="jobNavbar flex-column">
             <Row>
-                <Nav.Link href="#'">Dashboard</Nav.Link>
+                <Link to="/jobs">Jobs</Link>               
             </Row>
             <Row>
-                <Nav.Link href="/jobs">Jobs</Nav.Link>               
+                <Link to="/todo">To Do List</Link>    
             </Row>
             <Row>
-                <Nav.Link href="/todo">To Do List</Nav.Link>    
-            </Row>
-            <Row>
-                <Nav.Link href="#">Analytics</Nav.Link>    
+                <Link to="analytics">Analytics</Link>    
             </Row>
         </Nav>
     )

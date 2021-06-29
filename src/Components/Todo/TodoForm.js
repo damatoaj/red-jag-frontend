@@ -19,7 +19,7 @@ export default function TodoForm({ todoArray, todoFormString, setTodoFormString,
         };
         
         setTodoArray([
-            ...todoArray, { title:todoFormString, completed:false, id:Math.random()*10000}
+            ...todoArray, { title:todoFormString, completed:false, id:Math.random()*10000, dueDate: new Date()}
         ]);
         setTodoFormString('');
     }

@@ -13,7 +13,6 @@ import HeaderIllustration from '../../Images/LandingPage/HeaderIllustration.svg'
 function DefaultLanding() {
     return (
         <Container id="landingContainer" fluid={true}>
-            
                 <Col lg='6' md='6' sm='6' id="landingColumnLeft">
                     <Row id="landingRowTop">
                         <h2>Hello...</h2>
@@ -33,7 +32,6 @@ function DefaultLanding() {
                 <Col lg='6' md='6' sm='6'>
                     <Image id="landingImage" src={HeaderIllustration} />
                 </Col>
-            
         </Container>
     )
 }

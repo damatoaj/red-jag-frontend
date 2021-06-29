@@ -40,7 +40,8 @@ export default  function Todo({ title, todoArray, setTodoArray, todo, setDisplay
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
                 </Card.Body>
-                <Card.Text>{todo.completed}</Card.Text>
+                <Card.Text>Is complete: {todo.completed}</Card.Text>
+                <Card.Text>{todo.dueDate}</Card.Text>
                 <Button onClick={editHandler}>Edit</Button>
                 <Button onClick={deleteHandler}>Delete</Button>
             </Card>

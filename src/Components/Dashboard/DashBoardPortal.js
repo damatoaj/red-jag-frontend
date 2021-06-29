@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import DashBoardNav from './DashBoardNav';
 import JobsPortal from '../Jobs/JobsPortal';
 import TodoPortal from '../Todo/TodoPortal';
+import AnalyticsPortal from '../Analytics/AnalyticsPortal';
+
 
 import {
     Col,
@@ -17,24 +19,35 @@ function DashBoardPortal() {
             <Container>
                 <Row>
                     <Col>
-                        <DashBoardNav />
+                        <Row>
+                            <DashBoardNav />
+                        </Row>
+                        <Row>
+                            <Link to="/profile">
+                                Profile Icon
+                            </Link>
+                        </Row>
                     </Col>
                     <Col>
                         <Route
                             path='/jobs'
-                            render={ () => {
+                            render={() => {
                                 return <JobsPortal />
                             }}
                         />
-                        
                         <Route
                             path='/todo'
                             render={()=> {
                                 return <TodoPortal />
                             }}
                         />
+                        <Route
+                            path='/analytics'
+                            render={()=> {
+                                return <AnalyticsPortal />
+                            }}
+                        />
                     </Col>
-
                 </Row>
             </Container>
         </Router>

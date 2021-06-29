@@ -1,10 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react';
+
+import Map from './Map';
+import NLP from './NLP';
+
+import {
+    Container,
+    Row,
+    Col,
+    Tabs,
+    Tab
+} from 'react-bootstrap';
 
 function AnalyticsPortal() {
+    const [activeTab, setActiveTab] = useState('map')
+
     return (
-        <div>
-            
-        </div>
+        <Container>
+            <Tabs
+                id="dataTabs"
+                activeKey={activeTab}
+                onSelect={(k) => setActiveTab(k)}
+            >
+                <Tab eventKey='map'title="Job Map">
+                    <Map />
+                </Tab>
+                <Tab eventKey='nlp' title="NLP Analysis">
+                    <NLP />
+                </Tab>
+            </Tabs>
+        </Container>
     )
 }
 
