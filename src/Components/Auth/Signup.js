@@ -38,8 +38,7 @@ export default function Signup({
         e.preventDefault();
         console.log('signup')
         if (username !== '' && email !== '' && password !== '') {
-            setCurrentUser(dummyUser);
-            handleAuth();
+            handleAuth(dummyUser);
             handleClose();
             setAuthRedirect(true);
         }

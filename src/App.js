@@ -11,9 +11,15 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const handleAuth = () => {
+  const handleAuth = (user) => {
       console.log('handleAuth');
-      setIsAuthenticated(true);
+      if (user) {
+        setIsAuthenticated(true);
+        setCurrentUser(user);
+      } else {
+        setCurrentUser(null);
+        setIsAuthenticated(false);
+      }
   }
 
   return (    
@@ -23,7 +29,7 @@ function App() {
         setCurrentUser={setCurrentUser}
         handleAuth={handleAuth}
       />
-      <Content />
+      <Content currentUser={currentUser} />
     </Router>
   );
 }

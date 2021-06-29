@@ -33,8 +33,7 @@ export default function Login({
         e.preventDefault();
         console.log('login');
         if (username !== '' && password !== '') {
-            setCurrentUser(dummyUser);
-            handleAuth();
+            handleAuth(dummyUser);
             setAuthRedirect(true);
             handleClose();
         };
