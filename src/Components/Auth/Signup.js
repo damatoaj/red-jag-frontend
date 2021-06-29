@@ -1,4 +1,5 @@
 import React from 'react'
+import { Redirect } from 'react-router-dom';
 import '../../css/auth.css';
 
 //import components
@@ -7,7 +8,20 @@ import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-export default function Signup({ username, email, password, setUsername, setEmail, setPassword, handleClose}) {
+export default function Signup({ 
+    username, 
+    email, 
+    password, 
+    setUsername, 
+    setEmail, 
+    setPassword, 
+    handleClose, 
+    dummyUser, 
+    handleAuth, 
+    setCurrentUser,
+    authRedirect,
+    setAuthRedirect
+}) {
     const usernameHandler = (e) => {
         setUsername(e.target.value);
     };
@@ -23,12 +37,16 @@ export default function Signup({ username, email, password, setUsername, setEmai
     const submitHandler = (e) => {
         e.preventDefault();
         console.log('signup')
-        if (username != null && email != null && password != null) {
+        if (username !== '' && email !== '' && password !== '') {
+            setCurrentUser(dummyUser);
+            handleAuth();
             handleClose();
+            setAuthRedirect(true);
         }
     };
 
     //token coming back will be user{id, email, username}
+    if (authRedirect) return <Redirect to='/dashboard' />
     
     return (
         <Container className="authContainer">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import '../../css/auth.css';
 
 //import components
@@ -7,7 +8,19 @@ import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-export default function Login({ setUsername, setPassword, handleClose, username, password }) {
+export default function Login({ 
+    setUsername, 
+    setPassword, 
+    handleClose, 
+    username, 
+    password, 
+    dummyUser, 
+    handleAuth, 
+    setCurrentUser,
+    authRedirect,
+    setAuthRedirect
+
+}) {
     const usernameHandler = (e) => {
         setUsername(e.target.value);
     };
@@ -19,7 +32,10 @@ export default function Login({ setUsername, setPassword, handleClose, username,
     const loginHandler = (e) => {
         e.preventDefault();
         console.log('login');
-        if (username !== null && password !== null) {
+        if (username !== '' && password !== '') {
+            setCurrentUser(dummyUser);
+            handleAuth();
+            setAuthRedirect(true);
             handleClose();
         };
     };
@@ -27,6 +43,8 @@ export default function Login({ setUsername, setPassword, handleClose, username,
     const forgotPassword = (e) => {
         console.log('forgot password')
     };
+
+    if (authRedirect) return <Redirect to='/dashboard' />
 
     return (
         <Container className="authContainer hidden">
