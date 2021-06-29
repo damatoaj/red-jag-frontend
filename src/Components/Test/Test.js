@@ -13,9 +13,7 @@ import HeaderPortal from "../Header/HeaderPortal";
 export default function Test() {
     return (
         <Router>
-          <HeaderPortal />
-          <LandingPortal />
-            <DashBoardPortal />
+            <HeaderPortal />
         </Router>
     )
 }

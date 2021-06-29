@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-export default function Login({ setUsername, setPassword }) {
+export default function Login({ setUsername, setPassword, handleClose }) {
     const usernameHandler = (e) => {
         setUsername(e.target.value);
     };
@@ -19,6 +19,7 @@ export default function Login({ setUsername, setPassword }) {
     const loginHandler = (e) => {
         e.preventDefault();
         console.log('login');
+        handleClose();
     };
 
     const forgotPassword = (e) => {
@@ -29,6 +30,7 @@ export default function Login({ setUsername, setPassword }) {
         <Container className="authContainer hidden">
             <Row>
                 <Form className="authForm" onSubmit={loginHandler}>
+                <Form.Label>Login</Form.Label>
                 <Form.Group className="authUsernameGroup" >
                         <Form.Control 
                             size="lg" 

@@ -17,7 +17,7 @@ const StyledButton = styled(Button)`
   margin-left: 3rem;
   border-radius: 2px;
 `;
-function DefaultHeader() {
+function DefaultHeader({ handleShow }) {
   return (
     <StyledHeader>
       <img src={logo} width="250" style={{}}></img>
@@ -34,11 +34,7 @@ function DefaultHeader() {
             <Nav.Link href="home">Home</Nav.Link>
             <Nav.Link href="about">About</Nav.Link>
             <Nav.Link href="contact">Contact</Nav.Link>
-
-            <Link eventKey={2} to="/signin">
-              {/* <button>Sign In</button> */}
-              <StyledButton>Sign In</StyledButton>
-            </Link>
+            <StyledButton onClick={handleShow}>Sign In</StyledButton>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

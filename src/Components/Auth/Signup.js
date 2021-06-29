@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-export default function Signup({ setUsername, setEmail, setPassword}) {
+export default function Signup({ setUsername, setEmail, setPassword, handleClose}) {
     const usernameHandler = (e) => {
         setUsername(e.target.value);
     };
@@ -23,12 +23,16 @@ export default function Signup({ setUsername, setEmail, setPassword}) {
     const submitHandler = (e) => {
         e.preventDefault();
         console.log('signup')
+        handleClose();
     };
 
+    //token coming back will be user{id, email, username}
+    
     return (
         <Container className="authContainer">
         <Row>
             <Form className="authForm" onSubmit={submitHandler}>
+            <Form.Label>Signup</Form.Label>
             <Form.Group className="authUsernameGroup" >
                         <Form.Control 
                             size="lg" 
