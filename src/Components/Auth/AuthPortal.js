@@ -22,6 +22,8 @@ export default function AuthPortal({ setShow, handleClose, handleShow}) {
                         setUsername={setUsername} 
                         setPassword={setPassword}
                         handleClose={handleClose}
+                        user={username}
+                        password={password}
                     />
                 </Row>
                 <Row>
@@ -30,6 +32,9 @@ export default function AuthPortal({ setShow, handleClose, handleShow}) {
                         setEmail={setEmail} 
                         setPassword={setPassword}
                         handleClose={handleClose}
+                        username={username}
+                        password={password}
+                        email={email}
                     />
                 </Row>
             </Container>

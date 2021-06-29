@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-export default function Login({ setUsername, setPassword, handleClose }) {
+export default function Login({ setUsername, setPassword, handleClose, username, password }) {
     const usernameHandler = (e) => {
         setUsername(e.target.value);
     };
@@ -19,7 +19,9 @@ export default function Login({ setUsername, setPassword, handleClose }) {
     const loginHandler = (e) => {
         e.preventDefault();
         console.log('login');
-        handleClose();
+        if (username !== null && password !== null) {
+            handleClose();
+        };
     };
 
     const forgotPassword = (e) => {
