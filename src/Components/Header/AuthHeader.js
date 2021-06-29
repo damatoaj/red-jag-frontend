@@ -19,12 +19,18 @@ const StyledButton = styled(Button)`
 `;
 
 
-function AuthHeader({ setCurrentUser, currentUser, handleAuth }) {
+function AuthHeader({ setAuthRedirect, authRedirect, setCurrentUser, currentUser, handleAuth }) {
 
     const handleLogOut = () => {
         console.log('click')
-        setCurrentUser(null);
+        handleAuth(null);
+        setCurrentUser(null)
+        setAuthRedirect(false);
+        console.log(authRedirect)
+        console.log(currentUser)
     };
+
+    if(authRedirect === false) return <Redirect to='/' />
 
   return (
     <StyledHeader>
@@ -43,7 +49,7 @@ function AuthHeader({ setCurrentUser, currentUser, handleAuth }) {
             <Nav.Link href="home">Home</Nav.Link>
             <Nav.Link href="about">About</Nav.Link>
             <Nav.Link href="contact">Contact</Nav.Link>
-            <StyledButton onClick={e => handleAuth(null)}>Log Out</StyledButton>
+            <StyledButton onClick={handleLogOut}>Log Out</StyledButton>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

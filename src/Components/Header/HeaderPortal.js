@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 import {
     Modal,
@@ -12,6 +12,7 @@ import AuthHeader from './AuthHeader';
 
 function HeaderPortal({ currentUser, setCurrentUser, handleAuth }) {
     const [showAuth, setShowAuth] = useState(false);
+    const [authRedirect, setAuthRedirect] = useState(false);
 
     const handleClose = () => setShowAuth(false);
     const handleShow = (e) => {
@@ -20,7 +21,7 @@ function HeaderPortal({ currentUser, setCurrentUser, handleAuth }) {
     }
 
     let conditionalHeader = currentUser ? 
-        <AuthHeader handleAuth={handleAuth} setCurrentUser={setCurrentUser} currentUser={currentUser} /> : 
+        <AuthHeader setAuthRedirect={setAuthRedirect} authRedirect={authRedirect} handleAuth={handleAuth} setCurrentUser={setCurrentUser} currentUser={currentUser} /> : 
         <DefaultHeader handleAuth={handleAuth} handleShow={handleShow} />;
 
     return (
@@ -32,6 +33,8 @@ function HeaderPortal({ currentUser, setCurrentUser, handleAuth }) {
                     handleClose={handleClose}
                     handleAuth={handleAuth}
                     setCurrentUser={setCurrentUser}
+                    setAuthRedirect={setAuthRedirect}
+                    authRedirect={authRedirect}
                 />
             </Modal>
         </Container>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
 import LandingPortal from '../Landing/LandingPortal';
@@ -25,9 +25,9 @@ function Content({ currentUser }) {
             </Container>
 
     return (
-        <div>
+        <Router>
             {conditionalContent}
-        </div>
+        </Router>
     )
 }
 

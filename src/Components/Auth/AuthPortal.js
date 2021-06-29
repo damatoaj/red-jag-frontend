@@ -10,11 +10,10 @@ import {
 import Login from './Login'
 import Signup from './Signup'
 
-export default function AuthPortal({ setCurrentUser, handleClose, handleAuth}) {
+export default function AuthPortal({ setAuthRedirect, authRedirect, setCurrentUser, handleClose, handleAuth}) {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [authRedirect, setAuthRedirect] = useState(false);
     const hidden = false;
 
     const dummyUser = {
