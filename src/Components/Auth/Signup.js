@@ -46,7 +46,7 @@ export default function Signup({
     };
 
     //token coming back will be user{id, email, username}
-    if (authRedirect) return <Redirect to='/dashboard' />
+    if (authRedirect) return <Redirect to='/dashboard/jobs' />
     
     return (
         <Container className="authContainer">

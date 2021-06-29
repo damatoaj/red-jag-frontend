@@ -44,7 +44,7 @@ export default function Login({
         console.log('forgot password')
     };
 
-    if (authRedirect) return <Redirect to='/dashboard' />
+    if (authRedirect) return <Redirect to='/dashboard/jobs' />
 
     return (
         <Container className="authContainer hidden">
