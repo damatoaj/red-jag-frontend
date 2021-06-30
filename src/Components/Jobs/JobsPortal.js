@@ -3,15 +3,14 @@ import axios from 'axios';
 import '../../css/navbar.css';
 
 //import dummy data
-import jobs from './dummyData';
+import jobs from './dummyDataCall';
+import display from './dummyDataDisplay';
 //import components
-import NavBar from '../Dashboard/DashBoardNav';
 import Search from './Search';
 import JobTable from './JobTable';
 import JobDetails from './JobDetails';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Table from 'react-bootstrap/Table';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Container from 'react-bootstrap/Container';
@@ -21,15 +20,18 @@ import Container from 'react-bootstrap/Container';
 export default function NavbarPortal() {
   const [jobQuery, setJobQuery] = useState('');
   const [data, setData] = useState({ data:[]});
+  const [displayData, setDisplayData] = useState({ displayData:[]})
 
     useEffect(() => {
         const fetchJobList = async () => {
-            const { data } = await axios('https://jsonplaceholder.typicode.com/todos/')
-            setData({data:data})
+            // const { data } = await axios('https://jsonplaceholder.typicode.com/todos/')
+            setData({data:jobs})
+            setDisplayData({display: display})
         }
         fetchJobList();
-    }, [setData])
-    console.log(data.data)
+    }, [setData, setDisplayData])
+    console.log(data)
+    console.log(displayData)
 
     return (
         <Container className="navbarContainer" fluid>
@@ -54,7 +56,7 @@ export default function NavbarPortal() {
                 </Tabs>
               </Row>
               <Row>
-                <JobTable jobs={jobs} />
+                <JobTable displayData={displayData.display} />
               </Row>
             </Col>
           </Row>

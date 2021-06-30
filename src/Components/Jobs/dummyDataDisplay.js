@@ -1,3 +1,4 @@
+const display = 
 [
     {
         "title": "UX Designer",
@@ -393,3 +394,5 @@
         "thumbnail": null
     }
 ]
+
+export default display;

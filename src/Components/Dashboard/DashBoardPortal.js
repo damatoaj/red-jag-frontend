@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
+import '../../css/dashboard.css';
 
 import DashBoardNav from './DashBoardNav';
 import JobsPortal from '../Jobs/JobsPortal';
