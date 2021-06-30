@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
 
 //import components
 import {
@@ -10,11 +11,10 @@ import {
 import Login from './Login'
 import Signup from './Signup'
 
-export default function AuthPortal({ setCurrentUser, handleClose, handleAuth}) {
+export default function AuthPortal({ setAuthRedirect, authRedirect, setCurrentUser, handleClose, handleAuth}) {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [authRedirect, setAuthRedirect] = useState(false);
     const hidden = false;
 
     const dummyUser = {
@@ -22,6 +22,8 @@ export default function AuthPortal({ setCurrentUser, handleClose, handleAuth}) {
         email: 'johndoe@email.com',
         password: '123123123'
     }
+
+    if (authRedirect) return <Redirect to='/portal/dashboard' />
 
     return (
             <Container>
@@ -33,12 +35,11 @@ export default function AuthPortal({ setCurrentUser, handleClose, handleAuth}) {
                         setUsername={setUsername} 
                         setPassword={setPassword}
                         handleClose={handleClose}
-                        user={username}
+                        username={username}
                         password={password}
                         dummyUser={dummyUser}
                         handleAuth={handleAuth}
                         setCurrentUser={setCurrentUser}
-                        authRedirect={authRedirect}
                         setAuthRedirect={setAuthRedirect}
                     />
                 </Row>
@@ -54,7 +55,6 @@ export default function AuthPortal({ setCurrentUser, handleClose, handleAuth}) {
                         dummyUser={dummyUser}
                         handleAuth={handleAuth}
                         setCurrentUser={setCurrentUser}
-                        authRedirect={authRedirect}
                         setAuthRedirect={setAuthRedirect}
                     />
                 </Row>

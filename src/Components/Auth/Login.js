@@ -33,8 +33,7 @@ export default function Login({
         e.preventDefault();
         console.log('login');
         if (username !== '' && password !== '') {
-            setCurrentUser(dummyUser);
-            handleAuth();
+            handleAuth(dummyUser);
             setAuthRedirect(true);
             handleClose();
         };
@@ -43,8 +42,6 @@ export default function Login({
     const forgotPassword = (e) => {
         console.log('forgot password')
     };
-
-    if (authRedirect) return <Redirect to='/dashboard/jobs' />
 
     return (
         <Container className="authContainer hidden">

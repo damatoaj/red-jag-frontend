@@ -1,8 +1,8 @@
 import React from "react";
 import logo from "../../Images/Group 32.jpg";
-import { Container, Nav, Navbar, Button } from "react-bootstrap";
+import { Nav, Navbar, Button } from "react-bootstrap";
 import styled from "@emotion/styled";
-import { Link } from 'react-router-dom';
+
 
 const StyledHeader = styled.div`
   display: flex;

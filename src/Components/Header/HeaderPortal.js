@@ -1,15 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 import {
-    Modal
+    Modal,
+    Container,
 } from 'react-bootstrap';
 
 import DefaultHeader from './DefaultHeader';
 import AuthPortal from '../Auth/AuthPortal';
 import AuthHeader from './AuthHeader';
 
-function HeaderPortal({ setCurrentUser, handleAuth }) {
+function HeaderPortal({ currentUser, setCurrentUser, handleAuth }) {
     const [showAuth, setShowAuth] = useState(false);
+    const [authRedirect, setAuthRedirect] = useState(false);
 
     const handleClose = () => setShowAuth(false);
     const handleShow = (e) => {
@@ -17,20 +19,34 @@ function HeaderPortal({ setCurrentUser, handleAuth }) {
         console.log(showAuth, 'click')
     }
 
+    let conditionalHeader = currentUser ? 
+        <AuthHeader 
+            setAuthRedirect={setAuthRedirect} 
+            authRedirect={authRedirect} 
+            handleAuth={handleAuth} 
+            setCurrentUser={setCurrentUser} 
+            currentUser={currentUser} 
+        /> 
+            : 
+        <DefaultHeader 
+            handleAuth={handleAuth} 
+            handleShow={handleShow} 
+        />;
+
     return (
-        <div>
-            <DefaultHeader 
-                handleShow={handleShow}
-            />
+        <Container>
+            {conditionalHeader}
             <Modal show={showAuth}>
                 <AuthPortal 
                     setShowAuth={setShowAuth}
                     handleClose={handleClose}
                     handleAuth={handleAuth}
                     setCurrentUser={setCurrentUser}
+                    setAuthRedirect={setAuthRedirect}
+                    authRedirect={authRedirect}
                 />
             </Modal>
-        </div>
+        </Container>
     )
 }
 

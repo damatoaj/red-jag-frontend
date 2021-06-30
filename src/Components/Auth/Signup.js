@@ -18,7 +18,6 @@ export default function Signup({
     handleClose, 
     dummyUser, 
     handleAuth, 
-    setCurrentUser,
     authRedirect,
     setAuthRedirect
 }) {
@@ -38,15 +37,14 @@ export default function Signup({
         e.preventDefault();
         console.log('signup')
         if (username !== '' && email !== '' && password !== '') {
-            setCurrentUser(dummyUser);
-            handleAuth();
+            handleAuth(dummyUser);
             handleClose();
             setAuthRedirect(true);
         }
     };
 
     //token coming back will be user{id, email, username}
-    if (authRedirect) return <Redirect to='/dashboard/jobs' />
+
     
     return (
         <Container className="authContainer">
