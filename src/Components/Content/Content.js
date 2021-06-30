@@ -9,19 +9,19 @@ import UserPortal from '../Profile/UserPortal';
 function Content({ currentUser }) {
     let conditionalContent = currentUser ?
             <Container>
-                <Route path='/dashboard' render={() => (
-                    <DashBoardPortal />
-                )}>
+                <Route path='/dashboard' render={() => {
+                    return <DashBoardPortal />
+                }}>
                 </Route>
-                <Route path='/profile' render={() => (
-                    <UserPortal />
-                )}/>
+                <Route path='/profile' render={() => {
+                    return <UserPortal />
+                }}/>
             </Container>
         : 
             <Container>
-                <Route path='/' render={() => (
-                    <LandingPortal />
-                )}/>
+                <Route path='/' render={() => {
+                    return <LandingPortal />
+                }}/>
             </Container>
 
     return (

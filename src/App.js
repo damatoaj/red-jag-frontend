@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import HeaderPortal from './Components/Header/HeaderPortal';
 import Content from './Components/Content/Content';
@@ -12,7 +12,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleAuth = (user) => {
-      console.log('handleAuth');
+      console.log('handleAuth', user);
       if (user) {
         setIsAuthenticated(true);
         setCurrentUser(user);
@@ -20,6 +20,8 @@ function App() {
         setCurrentUser(null);
         setIsAuthenticated(false);
       }
+      console.log(currentUser)
+      console.log(isAuthenticated)
   }
 
   return (    

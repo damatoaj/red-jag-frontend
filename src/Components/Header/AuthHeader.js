@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../../Images/Group 32.jpg";
 import { Nav, Navbar, Button } from "react-bootstrap";
 import styled from "@emotion/styled";
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 const StyledHeader = styled.div`
   display: flex;
@@ -19,18 +19,22 @@ const StyledButton = styled(Button)`
 `;
 
 
-function AuthHeader({ setAuthRedirect, authRedirect, setCurrentUser, currentUser, handleAuth }) {
-
-    const handleLogOut = () => {
+function AuthHeader({ 
+    setAuthRedirect, 
+    authRedirect, 
+    setCurrentUser, 
+    currentUser, 
+    handleAuth 
+}) {
+    const handleLogOut = (e) => {
         console.log('click')
         handleAuth(null);
-        setCurrentUser(null)
+        setCurrentUser({});
         setAuthRedirect(false);
         console.log(authRedirect)
         console.log(currentUser)
-    };
-
-    if(authRedirect === false) return <Redirect to='/' />
+      };
+      
 
   return (
     <StyledHeader>

@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import {
     Modal,
     Container,
-    Row
 } from 'react-bootstrap';
 
 import DefaultHeader from './DefaultHeader';
@@ -21,8 +20,18 @@ function HeaderPortal({ currentUser, setCurrentUser, handleAuth }) {
     }
 
     let conditionalHeader = currentUser ? 
-        <AuthHeader setAuthRedirect={setAuthRedirect} authRedirect={authRedirect} handleAuth={handleAuth} setCurrentUser={setCurrentUser} currentUser={currentUser} /> : 
-        <DefaultHeader handleAuth={handleAuth} handleShow={handleShow} />;
+        <AuthHeader 
+            setAuthRedirect={setAuthRedirect} 
+            authRedirect={authRedirect} 
+            handleAuth={handleAuth} 
+            setCurrentUser={setCurrentUser} 
+            currentUser={currentUser} 
+        /> 
+            : 
+        <DefaultHeader 
+            handleAuth={handleAuth} 
+            handleShow={handleShow} 
+        />;
 
     return (
         <Container>

@@ -5,6 +5,7 @@ import DashBoardNav from './DashBoardNav';
 import JobsPortal from '../Jobs/JobsPortal';
 import TodoPortal from '../Todo/TodoPortal';
 import AnalyticsPortal from '../Analytics/AnalyticsPortal';
+import DashBoard from './DashBoard';
 
 
 import {
@@ -28,6 +29,12 @@ function DashBoardPortal() {
                     </Row>
                 </Col>
                 <Col>
+                    <Route
+                        path='/dashboard/dashboard'
+                        render={() => {
+                            return <DashBoard />
+                        }}
+                    />
                     <Route
                         path='/dashboard/jobs'
                         render={() => {
