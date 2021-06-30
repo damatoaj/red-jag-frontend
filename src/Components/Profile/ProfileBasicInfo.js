@@ -19,7 +19,7 @@ export default function ProfileBasicInfo() {
                     <EditProfileForm />
                 </Row>
                 <Row>
-                    <Link to="/dashboard/jobs">
+                    <Link to="/portal/jobs">
                         <Button id="dashboardBtn" variant="primary" size="lg" active>
                             Back to your dashboard
                         </Button>

@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../Images/Group 32.jpg";
 import { Nav, Navbar, Button } from "react-bootstrap";
 import styled from "@emotion/styled";
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 const StyledHeader = styled.div`
   display: flex;
@@ -29,11 +29,15 @@ function AuthHeader({
     const handleLogOut = (e) => {
         console.log('click')
         handleAuth(null);
-        setCurrentUser({});
+        setCurrentUser(null);
         setAuthRedirect(false);
         console.log(authRedirect)
-        console.log(currentUser)
+        if(!currentUser.username) {
+          console.log(currentUser, '&&&&&&&&')
+        }
       };
+console.log(currentUser)
+      if(currentUser=== null) return <Redirect to='/' />
       
 
   return (
@@ -50,9 +54,9 @@ function AuthHeader({
             <Nav.Link href="#"></Nav.Link>
           </Nav>
           <Nav className="mr-auto">
-            <Nav.Link href="home">Home</Nav.Link>
-            <Nav.Link href="about">About</Nav.Link>
-            <Nav.Link href="contact">Contact</Nav.Link>
+            <Link to="/">Home</Link>
+            <Link to="/portal/jobs">Dashboard</Link>
+            <Link to="/profile">Profile</Link>
             <StyledButton onClick={handleLogOut}>Log Out</StyledButton>
           </Nav>
         </Navbar.Collapse>

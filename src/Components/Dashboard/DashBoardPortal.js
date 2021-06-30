@@ -30,25 +30,25 @@ function DashBoardPortal() {
                 </Col>
                 <Col>
                     <Route
-                        path='/dashboard/dashboard'
+                        path='/portal/dashboard'
                         render={() => {
                             return <DashBoard />
                         }}
                     />
                     <Route
-                        path='/dashboard/jobs'
+                        path='/portal/jobs'
                         render={() => {
                             return <JobsPortal />
                         }}
                     />
                     <Route
-                        path='/dashboard/todo'
+                        path='/portal/todo'
                         render={()=> {
                             return <TodoPortal />
                         }}
                     />
                     <Route
-                        path='/dashboard/analytics'
+                        path='/portal/analytics'
                         render={()=> {
                             return <AnalyticsPortal />
                         }}

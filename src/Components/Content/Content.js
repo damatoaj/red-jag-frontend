@@ -7,27 +7,31 @@ import DashBoardPortal from '../Dashboard/DashBoardPortal';
 import UserPortal from '../Profile/UserPortal';
 
 function Content({ currentUser }) {
-    let conditionalContent = currentUser ?
+    console.log(currentUser)
+    let conditionalContent = currentUser !== null ?
             <Container>
-                <Route path='/dashboard' render={() => {
-                    return <DashBoardPortal />
-                }}>
-                </Route>
-                <Route path='/profile' render={() => {
-                    return <UserPortal />
-                }}/>
+                <Route 
+                    path='/portal' 
+                    render={() => {
+                        return <DashBoardPortal />
+                    }}
+                />
+                <Route 
+                    path='/profile' 
+                    render={() => {
+                        return <UserPortal />
+                    }}
+                />
             </Container>
         : 
             <Container>
-                <Route path='/' render={() => {
-                    return <LandingPortal />
-                }}/>
+                <Redirect  to='/' />
             </Container>
 
     return (
-        <Router>
+        <Container>
             {conditionalContent}
-        </Router>
+        </Container>
     )
 }
 

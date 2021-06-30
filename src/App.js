@@ -1,11 +1,12 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 
 import HeaderPortal from './Components/Header/HeaderPortal';
 import Content from './Components/Content/Content';
-
+import LandingPortal from './Components/Landing/LandingPortal';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -25,14 +26,15 @@ function App() {
   }
 
   return (    
-    <Router>
+    <Container>
       <HeaderPortal 
         currentUser={currentUser}
         setCurrentUser={setCurrentUser}
         handleAuth={handleAuth}
       />
+      <Route exact path="/" component={LandingPortal} />
       <Content currentUser={currentUser} />
-    </Router>
+    </Container>
   );
 }
 
