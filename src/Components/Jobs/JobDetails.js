@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 export default function JobDetails({data}) {
-    return data.map((job, index) => (
+    return data.jobs.map((job, index) => (
         <Card className="jobCard">
             <Card.Body>
                 <Card.Title> {job.title}</Card.Title>

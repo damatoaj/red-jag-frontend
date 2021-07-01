@@ -19,14 +19,16 @@ import Container from 'react-bootstrap/Container';
 
 export default function NavbarPortal() {
   const [jobQuery, setJobQuery] = useState('');
-  const [data, setData] = useState({ data:[]});
-  const [displayData, setDisplayData] = useState({ displayData:[]})
-
+  const [data, setData] = useState({jobs});
+  const [displayData, setDisplayData] = useState({display})
+  console.log(jobs)
+  console.log(display)
     useEffect(() => {
         const fetchJobList = async () => {
             // const { data } = await axios('https://jsonplaceholder.typicode.com/todos/')
-            setData({data:jobs})
-            setDisplayData({display: display})
+            // setData({data:jobs})
+            // setDisplayData({displayData: display})
+            console.log('fetch')
         }
         fetchJobList();
     }, [setData, setDisplayData])
@@ -42,7 +44,7 @@ export default function NavbarPortal() {
             <Col className="jobColOne">
               <Row>
                 <h1>Job Openings</h1>
-                <JobDetails data={data.data} />
+                <JobDetails data={data} />
               </Row>
             </Col>
             <Col className="jobColTwo" xs={8} sm={8} md={8} lg={8}>
@@ -56,7 +58,7 @@ export default function NavbarPortal() {
                 </Tabs>
               </Row>
               <Row>
-                <JobTable displayData={displayData.display} />
+                <JobTable displayData={displayData} />
               </Row>
             </Col>
           </Row>
