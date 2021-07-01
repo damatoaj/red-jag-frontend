@@ -5,7 +5,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
-function JobTable({ displayData }) {;
+function JobTable({ displayData }) {
+    console.log(displayData)
+    console.log(displayData.display[0])
     return (
         <Container>
             <Row>
@@ -27,12 +29,12 @@ function JobTable({ displayData }) {;
             </Row>
             <Row>
                 <Col>
-                    <h1>{displayData[0].title}</h1>
-                    <p>{displayData[0].company_name}</p>
-                    <p>{displayData[0].location}</p>
+                    <h1>{displayData.display[0].title}</h1>
+                    <p>{displayData.display[0].company_name}</p>
+                    <p>{displayData.display[0].location}</p>
                 </Col>
                 <Col>
-                    <span>{displayData[0].detected_extensions.posted_at}</span>
+                    <span>{displayData.display[0].detected_extensions.posted_at}</span>
                     <span>save</span>
                 </Col>
             </Row>
@@ -52,7 +54,7 @@ function JobTable({ displayData }) {;
             </Row>
             <Row>
                 <p className="jobDescription">
-                    {displayData[0].description}
+                    {displayData.display[0].description}
                 </p>
             </Row>
         </Container>
