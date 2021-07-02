@@ -29,7 +29,7 @@ function DashBoardPortal() {
                     </Row>
                     <Row>
                         <Link to="/profile">
-                            <FaUser/>
+                            <FaUser size={50}/>
                         </Link>
                     </Row>
                 </Col>

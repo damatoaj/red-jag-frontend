@@ -9,23 +9,6 @@ import { FaStar } from 'react-icons/fa';
 function JobTable({ displayData, setSavedJobsArray }) {
     return (
         <Container>
-            {/* <Row>
-                <Col>
-                    <h1>
-                        Jobs
-                    </h1>
-                </Col>
-                <Col>
-                    <h1>
-                        Alerts
-                    </h1>
-                </Col>
-                <Col>
-                    <h1>
-                        Saved
-                    </h1>
-                </Col>
-            </Row> */}
             <Row>
                 <Col>
                     <h1 id = 'title_text'>{displayData.display[0].title}</h1>

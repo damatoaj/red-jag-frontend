@@ -4,6 +4,8 @@ import React from 'react'
 import { FaStar } from 'react-icons/fa';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 export default function JobDetails({ data, savedJobsArray }) {
     const saveJobHandler = (e) => {
@@ -17,16 +19,27 @@ export default function JobDetails({ data, savedJobsArray }) {
     };
 
     //todo get access to the entire object to pass to the saved
+    // rebecca updated visuals on "add to saved" button to be star button
     return data.jobs.map((job, index) => (
         <Card className="jobCard">
             <Card.Body>
-                <Card.Title>{job.title}</Card.Title>
-                <Card.Text>{job.company_name}</Card.Text>
-                <Card.Text>{job.location}</Card.Text>
-                <Card.Text>{job.via}</Card.Text>
-                <Card.Text>{job.detected_extensions.posted_at}</Card.Text>
-                <Card.Text>{job.detected_extensions.schedule_type}</Card.Text>
-                <Button value={index} onClick={saveJobHandler}>Add to Saved</Button>
+                <Row>
+                    <Col><Card.Title>{job.title}</Card.Title></Col>
+                    <Col><Button id="star-btn" value={index} onClick={saveJobHandler}><FaStar/></Button></Col>
+                </Row>
+                <Row>
+                    <Col><Card.Text>{job.company_name}</Card.Text></Col>
+                    <Col><Card.Text>{job.detected_extensions.posted_at}</Card.Text></Col>
+                </Row>
+                <Row>
+                    <Col><Card.Text>{job.location}</Card.Text></Col>
+                    <Col><Card.Text>{job.detected_extensions.schedule_type}</Card.Text></Col>
+                </Row>
+                
+                {/* <Card.Text>{job.via}</Card.Text> */}
+                
+                
+               
             </Card.Body>
         </Card>
     ))

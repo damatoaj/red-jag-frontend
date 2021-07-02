@@ -1,6 +1,6 @@
 /*called by JobsPortal.js*/
 .navbarContainer {
-    margin: 10 auto;
+    /* margin: 10 auto; */
     background: #FFFFFF;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
     padding: 1em;
@@ -16,6 +16,13 @@
 .nav-tabs .nav-link, .nav-tabs .nav-link::after{
     color: #540D6E;
     border-color: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1px;
+    color: #540D6E;
 }
 
 .nav-tabs .nav-link:hover{
@@ -30,13 +37,14 @@
 /*called by JobDetails.js*/
 .jobCard {
     width: 90%;
-    background-color: transparent;
+    background-color: yellow;
     margin-top: .2rem;
-    align-content:space-around;
+    align-content:center;
+    justify-items: center;
 }
 
-.jobCard a.hover{
-    background-color: #EBEDF0;
+.card:hover{
+    background-color: blue;
 }
 
 .card-title{
@@ -52,10 +60,41 @@
     color: #36393B;
 }
 
+/* styling component to be used with Form inline component, not form.group, inputgroup component
+.form-control{
+    width: 760px;
+    height: 33px;
+    left: 653px;
+    top: 165px;
+    
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;
+    box-sizing: border-box;
+    border-radius: 20px;
+} */
+
 #star-btn{
     color:rgb(228, 8, 8);
     align-content: right;
     background-color: #979797;
+}
+
+#star-btn:hover{
+    color:black;
+}
+
+#sort-btn{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1px;
+    color: #540D6E;
+
+    border-color: #bcd6e4;
+    border-width: .1em;
+    background-color: aliceblue;
 }
 
 #title_text{
@@ -124,12 +163,9 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    /* identical to box height */
-
     letter-spacing: 0.1px;
-
     color: #540D6E;
-
+    text-align: center;
 }
 
 .card-text{
@@ -145,35 +181,46 @@
     color: #979797;
 }
 
-/*called by JobDetails.js*/
-/* .jobDetails {
-    width: 50vw;
-} */
-.frame::-webkit-scrollbar {
-    -webkit-appearance: progress-bar;
-}
-
-.frame::-webkit-scrollbar:vertical {
-    width: 11px;
-}
 
 .jobColOne {
-    border: 2px solid grey;
-    align-items:stretch;
-    box-shadow: -5px 0px 10px grey;
-    height: 50vh;
+    border: 10px solid grey;
+    align-items:center;
+    /* height: 50vh; */
     overflow: auto;
+    justify-content: stretch;
+    align-content: center;
+    justify-items: center;
+    background-color: green;
 }
 
 .jobColTwo {
-    height:50vh;
-    border: 2px solid grey;
+    /* height:50vh; */
+    border: 10px solid grey;
     overflow: auto;
 }
 
 .applyButtons {
     background-color: #86BBD8;
     border-color: #86BBD8;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 66px;
+    align-content: center;
+    text-align: center;
+    /* identical to box height, or 660% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+
+    color: #FFFFFF;
+
+    width: 181px;
+    height: 35px;
+    left: 887px;
+    top: 401px;
 }
 
 /*called by JobTable*/
@@ -236,12 +283,22 @@
 /*END*/
 
 .jobSearch {
-    justify-content: space-evenly;
+    justify-content: right;
     align-items: right;
+    align-content: right;
+}
+
+.jobSearch .col-auto{
+    justify-content: left;
+    align-items: left;
+    align-content: left;
+
 }
 
 .JobTable .col{
     padding: 1em;
     height: 10vh;
     background-color: orchid;
+    box-shadow: -5px 0px 10px grey;
+
 }
