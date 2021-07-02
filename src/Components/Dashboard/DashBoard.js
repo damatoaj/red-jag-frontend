@@ -5,9 +5,6 @@ import {
 } from 'react-bootstrap';
 
 function DashBoard({ savedJobsArray }) {
-    console.log(savedJobsArray[0].title)
-
-   
 
     return (
         <Table>

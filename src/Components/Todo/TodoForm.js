@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {Redirect} from 'react-router-dom';
 
 import {
     Row,
@@ -22,6 +23,7 @@ export default function TodoForm({ todoArray, todoFormString, setTodoFormString,
             ...todoArray, { title:todoFormString, completed:false, id:Math.random()*10000, dueDate: new Date()}
         ]);
         setTodoFormString('');
+        return <Redirect to="/portal/todo" />
     }
 
 
