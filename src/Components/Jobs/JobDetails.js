@@ -1,5 +1,7 @@
-import React from 'react'
+/*called by JobPortal*/
 
+import React from 'react'
+import { FaStar } from 'react-icons/fa';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
@@ -21,6 +23,7 @@ export default function JobDetails({ data, savedJobsArray }) {
                 <Card.Text>{job.detected_extensions.posted_at}</Card.Text>
                 <Card.Text>{job.detected_extensions.schedule_type}</Card.Text>
                 <Button value={index} onClick={saveJobHandler}>Add to Saved</Button>
+
             </Card.Body>
         </Card>
     ))

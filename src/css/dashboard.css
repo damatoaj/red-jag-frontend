@@ -1,0 +1,13 @@
+.container{
+    /* background-color: green; */
+    /* height:50%; */
+}
+
+.row{
+    /* background-color: goldenrod; */
+}
+
+.col:last-of-type{
+    /* background-color: yellow; */
+    padding: 0%;
+}

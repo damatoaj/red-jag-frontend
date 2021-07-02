@@ -1,3 +1,7 @@
+/*called by DashboardPortal.js*/
+
+/*calls JobDetails which calls JobCard */
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../../css/navbar.css';
@@ -15,10 +19,18 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Container from 'react-bootstrap/Container';
 
-
-
 export default function NavbarPortal({ savedJobsArray }) {
+
   const [jobQuery, setJobQuery] = useState('');
+  const [data, setData] = useState({ jobs});
+  const [displayData, setDisplayData] = useState({ display})
+
+
+    useEffect(() => {
+        const fetchJobList = async () => {
+            // const { data } = await axios('https://jsonplaceholder.typicode.com/todos/')
+            //setData({data:jobs})
+            //setDisplayData({display: display})
   const [data, setData] = useState({jobs});
   const [displayData, setDisplayData] = useState({display})
   console.log(jobs)
@@ -38,9 +50,10 @@ export default function NavbarPortal({ savedJobsArray }) {
           <Row>
             <Search setJobQuery={setJobQuery} />
           </Row>
-          <Row>
+          <Row className = "jobResultsRow">
             <Col className="jobColOne">
               <Row>
+                <h1 id= 'title2_text'>Job Openings</h1>
                 <h1>Job Openings</h1>
                 <JobDetails data={data} savedJobsArray={savedJobsArray}/>
               </Row>
@@ -48,11 +61,8 @@ export default function NavbarPortal({ savedJobsArray }) {
             <Col className="jobColTwo" xs={8} sm={8} md={8} lg={8}>
               <Row>
                 <Tabs>
-                  <Tab eventKey="Jobs" title="Jobs">
-                    
-                  </Tab>
-                  <Tab eventKey="SaveJobs" title="Save Jobs">
-                  </Tab>
+                  <Tab tabClassName='jobTabs' eventKey="Jobs" title="Jobs"></Tab>
+                  <Tab tabClassName='jobTabs' eventKey="SaveJobs" title="Saved Jobs"></Tab>
                 </Tabs>
               </Row>
               <Row>
