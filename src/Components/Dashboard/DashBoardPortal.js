@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Link } from 'react-router-dom';
 import '../../css/dashboard.css';
 
@@ -18,6 +18,7 @@ import {
 } from 'react-bootstrap'
 
 function DashBoardPortal() {
+    const [savedJobsArray, setSavedJobsArray] = useState([]);
     return (
         <Container>
             <Row>
@@ -37,13 +38,13 @@ function DashBoardPortal() {
                     <Route
                         path='/portal/dashboard'
                         render={() => {
-                            return <DashBoard />
+                            return <DashBoard savedJobsArray={savedJobsArray}  />
                         }}
                     />
                     <Route
                         path='/portal/jobs'
                         render={() => {
-                            return <JobsPortal />
+                            return <JobsPortal savedJobsArray={savedJobsArray} />
                         }}
                     />
                     <Route

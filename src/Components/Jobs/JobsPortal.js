@@ -21,8 +21,8 @@ import Container from 'react-bootstrap/Container';
 
 export default function NavbarPortal({ savedJobsArray }) {
   const [jobQuery, setJobQuery] = useState('');
-  const [data, setData] = useState({ jobs});
-  const [displayData, setDisplayData] = useState({ display})
+  const [data, setData] = useState({ jobs });
+  const [displayData, setDisplayData] = useState({ display })
 
   console.log(jobs)
   console.log(display)

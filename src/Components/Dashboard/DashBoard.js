@@ -4,7 +4,8 @@ import {
     Table
 } from 'react-bootstrap';
 
-function DashBoard() {
+function DashBoard({ savedJobsArray }) {
+    console.log(savedJobsArray)
     return (
         <Table>
             <thead>
