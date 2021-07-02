@@ -8,6 +8,8 @@ import TodoPortal from '../Todo/TodoPortal';
 import AnalyticsPortal from '../Analytics/AnalyticsPortal';
 import DashBoard from './DashBoard';
 
+import {FaUser} from "react-icons/fa"
+
 
 import {
     Col,
@@ -19,16 +21,18 @@ function DashBoardPortal() {
     return (
         <Container>
             <Row>
-                <Col>
+                <Col xs='2'>
                     <Row>
+                    {/* '''calls DashbBoardNav which creates the NavBar() object the NavBar()''' */}
                         <DashBoardNav />
                     </Row>
                     <Row>
                         <Link to="/profile">
-                            Profile Icon
+                            <FaUser/>
                         </Link>
                     </Row>
                 </Col>
+                {/* what does next ROUTE column do? */}
                 <Col>
                     <Route
                         path='/portal/dashboard'
