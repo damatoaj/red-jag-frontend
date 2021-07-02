@@ -1,31 +1,174 @@
+/*called by JobsPortal.js*/
 .navbarContainer {
-    width:95%;
     margin: 10 auto;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    height: 10vh;
 }
 
+ .nav-tabs .nav-link.active {
+    color: white;
+    background-color: #979797;
+    border-color: none;
+}
+
+.nav-tabs .nav-link, .nav-tabs .nav-link::after{
+    color: #540D6E;
+    border-color: none;
+}
+
+.nav-tabs .nav-link:hover{
+    color:#540D6E;
+}
+
+
+/* .navbarContainer tabs {
+    
+} */
+
+/*called by JobDetails.js*/
 .jobCard {
     width: 90%;
-    background-color: aqua;
-    margin-top: 2.7rem;
+    background-color: transparent;
+    margin-top: .2rem;
+    align-content:space-around;
 }
 
-.jobDetails {
-    width: 15vw;
+.jobCard a.hover{
+    background-color: #EBEDF0;
+}
+
+.card-title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 3em;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    
+    color: #36393B;
+}
+
+#star-btn{
+    color:rgb(228, 8, 8);
+    align-content: right;
+    background-color: #979797;
+}
+
+#title_text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1em;
+    /* or 367% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+
+    color: #36393B;
+}
+
+#subtitle_text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1em;
+    /* or 550% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+
+    color: #979797;
+    }
+
+#subtitle2_text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.1px;
+
+    color: #979797;
+}
+
+#subtitle3_text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 66px;
+    /* identical to box height, or 660% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+
+    color: #979797;
+}
+
+.jobResultsRow{
+    height: 10vh;
+}
+
+#title2_text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    letter-spacing: 0.1px;
+
+    color: #540D6E;
+
+}
+
+.card-text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1em;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 1px;
+
+    color: #979797;
+}
+
+/*called by JobDetails.js*/
+/* .jobDetails {
+    width: 50vw;
+} */
+.frame::-webkit-scrollbar {
+    -webkit-appearance: progress-bar;
+}
+
+.frame::-webkit-scrollbar:vertical {
+    width: 11px;
 }
 
 .jobColOne {
     border: 2px solid grey;
-    padding-right: .5rem;
-    padding-left: 1rem;
+    align-items:stretch;
     box-shadow: -5px 0px 10px grey;
-    height: 80vh;
-    overflow: scroll;
+    height: 50vh;
+    overflow: auto;
 }
 
 .jobColTwo {
-    height:80vh;
+    height:50vh;
     border: 2px solid grey;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .applyButtons {
@@ -33,20 +176,72 @@
     border-color: #86BBD8;
 }
 
+/*called by JobTable*/
 .jobDescription {
     white-space: pre-wrap;
     text-overflow:hidden;
     overflow: scroll;
     height: 49vh;
-
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.1px;
+    
+    color: #646768;
 }
+
+/*code for styling function NavBar() from DashBoardNav.js.
+  represents 4 links in left side column of page: "Dashboard","Jobs","To Do List","Analytics"*/
 
 .jobNavbar {
-    height: 80vh;
+    height: 50vh;
     justify-content: space-evenly;
 }
+
+/*START*/
+.jobNavbar a:link, a:visited{
+    position: sticky;
+    height: 100%;
+    left: 21px;
+    top: 291px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    /* identical to box height */
+
+    letter-spacing: 0.1px;
+    text-align: center;
+    color: #9F9F9F;
+
+    }
+      
+.jobNavbar a:hover, a:active {
+    background: #86BBD8;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 5px 0px 0px 5px;
+    color: #FFFFFF;
+    
+}
+/*END*/
 
 .jobSearch {
     justify-content: space-evenly;
     align-items: right;
+}
+
+.JobTable .col{
+    padding: 1em;
+    height: 10vh;
+    background-color: orchid;
 }
