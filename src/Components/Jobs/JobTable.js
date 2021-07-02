@@ -6,9 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { FaStar } from 'react-icons/fa';
 
-function JobTable({ displayData }) {
-    console.log(displayData)
-    console.log(displayData.display[0])
+function JobTable({ displayData, setSavedJobsArray }) {
     return (
         <Container>
             {/* <Row>
