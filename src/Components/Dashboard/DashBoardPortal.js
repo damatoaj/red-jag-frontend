@@ -1,10 +1,14 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Route, Link } from 'react-router-dom';
+import '../../css/dashboard.css';
 
 import DashBoardNav from './DashBoardNav';
 import JobsPortal from '../Jobs/JobsPortal';
 import TodoPortal from '../Todo/TodoPortal';
 import AnalyticsPortal from '../Analytics/AnalyticsPortal';
+import DashBoard from './DashBoard';
+
+import {FaUser} from "react-icons/fa"
 
 
 import {
@@ -14,43 +18,50 @@ import {
 } from 'react-bootstrap'
 
 function DashBoardPortal() {
+    const [savedJobsArray, setSavedJobsArray] = useState([]);
     return (
-        <Router>
-            <Container>
-                <Row>
-                    <Col>
-                        <Row>
-                            <DashBoardNav />
-                        </Row>
-                        <Row>
-                            <Link to="/profile">
-                                Profile Icon
-                            </Link>
-                        </Row>
-                    </Col>
-                    <Col>
-                        <Route
-                            path='/dashboard/jobs'
-                            render={() => {
-                                return <JobsPortal />
-                            }}
-                        />
-                        <Route
-                            path='/dashboard/todo'
-                            render={()=> {
-                                return <TodoPortal />
-                            }}
-                        />
-                        <Route
-                            path='/dashboard/analytics'
-                            render={()=> {
-                                return <AnalyticsPortal />
-                            }}
-                        />
-                    </Col>
-                </Row>
-            </Container>
-        </Router>
+        <Container>
+            <Row>
+                <Col xs='2'>
+                    <Row>
+                    {/* '''calls DashbBoardNav which creates the NavBar() object the NavBar()''' */}
+                        <DashBoardNav />
+                    </Row>
+                    <Row>
+                        <Link to="/profile">
+                            <FaUser size={50}/>
+                        </Link>
+                    </Row>
+                </Col>
+                {/* what does next ROUTE column do? */}
+                <Col>
+                    <Route
+                        path='/portal/dashboard'
+                        render={() => {
+                            return <DashBoard savedJobsArray={savedJobsArray}  />
+                        }}
+                    />
+                    <Route
+                        path='/portal/jobs'
+                        render={() => {
+                            return <JobsPortal savedJobsArray={savedJobsArray} />
+                        }}
+                    />
+                    <Route
+                        path='/portal/todo'
+                        render={()=> {
+                            return <TodoPortal />
+                        }}
+                    />
+                    <Route
+                        path='/portal/analytics'
+                        render={()=> {
+                            return <AnalyticsPortal />
+                        }}
+                    />
+                </Col>
+            </Row>
+        </Container>
     )
 }
 

@@ -26,9 +26,9 @@ function App() {
     console.log(isAuthenticated);
   };
 
-  return (
+  return (    
     <Container>
-      <HeaderPortal
+      <HeaderPortal 
         currentUser={currentUser}
         setCurrentUser={setCurrentUser}
         handleAuth={handleAuth}
