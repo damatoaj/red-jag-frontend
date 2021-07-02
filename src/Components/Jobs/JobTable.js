@@ -6,7 +6,9 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { FaStar } from 'react-icons/fa';
 
-function JobTable({ displayData }) {;
+function JobTable({ displayData }) {
+    console.log(displayData)
+    console.log(displayData.display[0])
     return (
         <Container>
             {/* <Row>
@@ -35,6 +37,13 @@ function JobTable({ displayData }) {;
                 <Col>
                     <span id = 'subtitle2_text'>Posted {displayData.display[0].detected_extensions.posted_at}</span>
                     <span id = 'subtitle3_text'><Button id="star-btn"><FaStar/></Button> Save</span>
+                    <h1>{displayData.display[0].title}</h1>
+                    <p>{displayData.display[0].company_name}</p>
+                    <p>{displayData.display[0].location}</p>
+                </Col>
+                <Col>
+                    <span>{displayData.display[0].detected_extensions.posted_at}</span>
+                    <span>save</span>
                 </Col>
             </Row>
             <Row>

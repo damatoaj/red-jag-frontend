@@ -30,6 +30,15 @@ export default function NavbarPortal() {
             // const { data } = await axios('https://jsonplaceholder.typicode.com/todos/')
             //setData({data:jobs})
             //setDisplayData({display: display})
+  const [data, setData] = useState({jobs});
+  const [displayData, setDisplayData] = useState({display})
+  console.log(jobs)
+  console.log(display)
+    useEffect(() => {
+        const fetchJobList = async () => {
+            // const { data } = await axios('https://jsonplaceholder.typicode.com/todos/')
+            // setData({data:jobs})
+            // setDisplayData({displayData: display})
             console.log('fetch')
         }
         fetchJobList();
@@ -46,6 +55,7 @@ export default function NavbarPortal() {
             <Col className="jobColOne">
               <Row>
                 <h1 id= 'title2_text'>Job Openings</h1>
+                <h1>Job Openings</h1>
                 <JobDetails data={data} />
               </Row>
             </Col>

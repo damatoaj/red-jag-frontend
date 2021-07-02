@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 export default function JobDetails({data}) {
     return data.jobs.map((job, index) => (
         // maybe approach as e-card component?
+
         <Card className="jobCard">
             <Card.Body>
             <Button id="star-btn"><FaStar/></Button>
