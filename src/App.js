@@ -1,29 +1,30 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState } from 'react';
-import { Route } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState } from "react";
+import { Route } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
-import HeaderPortal from './Components/Header/HeaderPortal';
-import Content from './Components/Content/Content';
-import LandingPortal from './Components/Landing/LandingPortal';
+import HeaderPortal from "./Components/Header/HeaderPortal";
+import Content from "./Components/Content/Content";
+import LandingPortal from "./Components/Landing/LandingPortal";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleAuth = (user) => {
-      console.log('handleAuth', user);
-      if (user) {
-        setIsAuthenticated(true);
-        setCurrentUser(user);
-      } else {
-        setCurrentUser(null);
-        setIsAuthenticated(false);
-      }
-      console.log(currentUser)
-      console.log(isAuthenticated)
-  }
+    console.log("handleAuth", user);
+    if (user) {
+      setIsAuthenticated(true);
+      setCurrentUser(user);
+    } else {
+      setCurrentUser(null);
+      setIsAuthenticated(false);
+    }
+    console.log(currentUser);
+    console.log(isAuthenticated);
+  };
 
   return (    
     <Container>
@@ -34,6 +35,7 @@ function App() {
       />
       <Route exact path="/" component={LandingPortal} />
       <Content currentUser={currentUser} />
+      <Footer />
     </Container>
   );
 }
