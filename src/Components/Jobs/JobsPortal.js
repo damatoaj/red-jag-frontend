@@ -38,7 +38,8 @@ export default function NavbarPortal({ savedJobsArray }) {
     }, [setData, setDisplayData])
 
     return (
-        <Container className="navbarContainer" fluid>
+        // <Container className="navbarContainer" fluid>
+        <Container className="navbarContainer">
           <Row>
             <Search setJobQuery={setJobQuery} />
           </Row>
