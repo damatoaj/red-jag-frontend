@@ -17,7 +17,7 @@ import Container from 'react-bootstrap/Container';
 
 
 
-export default function NavbarPortal() {
+export default function NavbarPortal({ savedJobsArray }) {
   const [jobQuery, setJobQuery] = useState('');
   const [data, setData] = useState({jobs});
   const [displayData, setDisplayData] = useState({display})
@@ -32,8 +32,6 @@ export default function NavbarPortal() {
         }
         fetchJobList();
     }, [setData, setDisplayData])
-    console.log(data)
-    console.log(displayData)
 
     return (
         <Container className="navbarContainer" fluid>
@@ -44,7 +42,7 @@ export default function NavbarPortal() {
             <Col className="jobColOne">
               <Row>
                 <h1>Job Openings</h1>
-                <JobDetails data={data} />
+                <JobDetails data={data} savedJobsArray={savedJobsArray}/>
               </Row>
             </Col>
             <Col className="jobColTwo" xs={8} sm={8} md={8} lg={8}>
@@ -58,7 +56,7 @@ export default function NavbarPortal() {
                 </Tabs>
               </Row>
               <Row>
-                <JobTable displayData={displayData} />
+                <JobTable displayData={displayData} savedJobsArray={savedJobsArray}/>
               </Row>
             </Col>
           </Row>
