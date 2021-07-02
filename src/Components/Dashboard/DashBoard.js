@@ -20,6 +20,9 @@ function DashBoard({ savedJobsArray }) {
                     <th>Hide</th>
                 </tr>
             </thead>
+            <tbody>
+
+            </tbody>
         </Table>
     )
 }

@@ -35,13 +35,6 @@ function JobTable({ displayData, setSavedJobsArray }) {
                 <Col>
                     <span id = 'subtitle2_text'>Posted {displayData.display[0].detected_extensions.posted_at}</span>
                     <span id = 'subtitle3_text'><Button id="star-btn"><FaStar/></Button> Save</span>
-                    <h1>{displayData.display[0].title}</h1>
-                    <p>{displayData.display[0].company_name}</p>
-                    <p>{displayData.display[0].location}</p>
-                </Col>
-                <Col>
-                    <span>{displayData.display[0].detected_extensions.posted_at}</span>
-                    <span>save</span>
                 </Col>
             </Row>
             <Row>

@@ -46,7 +46,6 @@ export default function NavbarPortal({ savedJobsArray }) {
             <Col className="jobColOne">
               <Row>
                 <h1 id= 'title2_text'>Job Openings</h1>
-                <h1>Job Openings</h1>
                 <JobDetails data={data} savedJobsArray={savedJobsArray}/>
               </Row>
             </Col>
