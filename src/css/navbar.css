@@ -1,6 +1,10 @@
+.react-custom-scrollbars-fix::-webkit-scrollbar {
+    width: 7px;
+  }
+
 /*called by JobsPortal.js*/
 .navbarContainer {
-    /* margin: 10 auto; */
+    margin: 0 auto;
     background: #FFFFFF;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
     padding: 1em;
@@ -36,15 +40,13 @@
 
 /*called by JobDetails.js*/
 .jobCard {
-    width: 90%;
-    background-color: yellow;
-    margin-top: .2rem;
+    /* background-color: yellow; */
     align-content:center;
     justify-items: center;
 }
 
 .card:hover{
-    background-color: blue;
+    background-color:#86BBD8;
 }
 
 .card-title{
@@ -72,16 +74,26 @@
     box-sizing: border-box;
     border-radius: 20px;
 } */
-
-#star-btn{
-    color:rgb(228, 8, 8);
-    align-content: right;
-    background-color: #979797;
+/*.jobCard .btn*/
+ #star-btn {
+    color:grey;
+    align-content: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 0%;
+    margin: 0;
+    border-color: transparent;
 }
 
 #star-btn:hover{
-    color:black;
+    color:red;
 }
+
+#star-btn:active{
+    color:blue;
+}
+
+
 
 #sort-btn{
     font-family: Montserrat;
@@ -183,20 +195,24 @@
 
 
 .jobColOne {
-    border: 10px solid grey;
+    border: 2px solid grey;
     align-items:center;
-    /* height: 50vh; */
+    height: 50vh;
     overflow: auto;
     justify-content: stretch;
     align-content: center;
     justify-items: center;
     background-color: green;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+
 }
 
 .jobColTwo {
-    /* height:50vh; */
-    border: 10px solid grey;
+    height:50vh;
+    border: 2px solid grey;
     overflow: auto;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+
 }
 
 .applyButtons {
