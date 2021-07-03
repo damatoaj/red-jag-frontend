@@ -197,7 +197,7 @@
 .jobColOne {
     border: 2px solid grey;
     align-items:center;
-    height: 50vh;
+    height: 100vh;
     overflow: auto;
     justify-content: stretch;
     align-content: center;
@@ -208,7 +208,7 @@
 }
 
 .jobColTwo {
-    height:50vh;
+    height:100vh;
     border: 2px solid grey;
     overflow: auto;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
