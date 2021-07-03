@@ -1,5 +1,4 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
 import '../../css/auth.css';
 
 //import components
@@ -16,10 +15,7 @@ export default function Login({
     password, 
     dummyUser, 
     handleAuth, 
-    setCurrentUser,
-    authRedirect,
     setAuthRedirect
-
 }) {
     const usernameHandler = (e) => {
         setUsername(e.target.value);
@@ -31,7 +27,6 @@ export default function Login({
 
     const loginHandler = (e) => {
         e.preventDefault();
-        console.log('login');
         if (username !== '' && password !== '') {
             handleAuth(dummyUser);
             setAuthRedirect(true);

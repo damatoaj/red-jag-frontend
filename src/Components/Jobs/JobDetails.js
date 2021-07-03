@@ -10,12 +10,12 @@ import { Row } from 'react-bootstrap';
 
 export default function JobDetails({ data, savedJobsArray }) {
     const saveJobHandler = (index) => {
-        console.log(index)
         let theJob = data.jobs[index];
-        savedJobsArray.push(theJob)
-        console.log(data.jobs[index])
-        console.log(theJob)
-        console.log(savedJobsArray)
+        if(savedJobsArray.includes(theJob)) {
+            return
+        } else {
+            savedJobsArray.push(theJob);
+        };
     };
 
     //todo get access to the entire object to pass to the saved

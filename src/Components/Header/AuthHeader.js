@@ -18,7 +18,6 @@ const StyledButton = styled(Button)`
   border-radius: 2px;
 `;
 
-
 function AuthHeader({ 
     setAuthRedirect, 
     authRedirect, 
@@ -27,7 +26,6 @@ function AuthHeader({
     handleAuth 
 }) {
     const handleLogOut = (e) => {
-        console.log('click')
         handleAuth(null);
         setCurrentUser(null);
         setAuthRedirect(false);
@@ -36,7 +34,7 @@ function AuthHeader({
           console.log(currentUser, '&&&&&&&&')
         }
       };
-console.log(currentUser)
+      
       if(currentUser=== null) return <Redirect to='/' />
       
 

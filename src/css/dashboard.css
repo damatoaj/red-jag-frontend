@@ -1,10 +1,10 @@
 .container{
-    /* background-color: green; */
-    /* height:50%; */
+    background-color: green;
+    height:50%;
 }
 
 .row{
-    /* background-color: goldenrod; */
+    background-color: goldenrod;
 }
 
 .col:last-of-type{

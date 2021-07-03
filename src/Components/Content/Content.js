@@ -1,13 +1,13 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
-import LandingPortal from '../Landing/LandingPortal';
+
 import DashBoardPortal from '../Dashboard/DashBoardPortal'; 
 import UserPortal from '../Profile/UserPortal';
 
 function Content({ currentUser }) {
-    console.log(currentUser)
+
     let conditionalContent = currentUser !== null ?
             <Container>
                 <Route 

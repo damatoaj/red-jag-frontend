@@ -14,7 +14,6 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleAuth = (user) => {
-    console.log("handleAuth", user);
     if (user) {
       setIsAuthenticated(true);
       setCurrentUser(user);
@@ -22,8 +21,6 @@ function App() {
       setCurrentUser(null);
       setIsAuthenticated(false);
     }
-    console.log(currentUser);
-    console.log(isAuthenticated);
   };
 
   return (    
