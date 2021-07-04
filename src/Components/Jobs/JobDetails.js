@@ -27,7 +27,6 @@ export default function JobDetails({ data, savedJobsArray }) {
         <Card className="jobCard">
             <IconContext.Provider value={{className:'react-icons'}}>
                 <Card.Body>
-
                     <Row>
                     
                         <Col><Card.Title>{job.title}</Card.Title></Col>

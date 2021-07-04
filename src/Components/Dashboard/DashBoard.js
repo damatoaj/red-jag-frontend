@@ -42,34 +42,34 @@ function DashBoard({ savedJobsArray }) {
 
     let jobsRow = savedJobsArray.map((savedJob, index) => (
         <tr>
-            <th>{savedJob.title}</th>
-            <th>{savedJob.company_name}</th>
-            <th>{savedJob.detected_extensions.posted_at}</th>
-            <th>
+            <td>{savedJob.title}</td>
+            <td>{savedJob.company_name}</td>
+            <td>{savedJob.detected_extensions.posted_at}</td>
+            <td>
                 
                 <BsEnvelope />
-            </th>
-            <th>
+            </td>
+            <td>
                 <select name="status" onChange={statusChange}> 
                     <option value="none" disabled hidden>Default</option>
                     <option value="done" >Done</option>
                     <option value="follow_up">Follow Up</option>
                     <option value="act_now">Act Now</option>
                 </select>
-            </th>
-            <th>
+            </td>
+            <td>
                 <input placeholder="Previously saved comment" onChange={commentChange}>
                 
                 </input>
-            </th>
-            <th>
+            </td>
+            <td>
                 <Button onClick={editJobChange} value={index}>
                     <BsPencil value={index}/>
                 </Button>
-            </th>
-            <th>
+            </td>
+            <td>
                 <BsEyeSlash />
-            </th>
+            </td>
         </tr>
     ))
     return (
@@ -86,8 +86,8 @@ function DashBoard({ savedJobsArray }) {
                     <th>Hide</th>
                 </tr>
             </thead>
-            <tbody className='logBody'>
-                {jobsRow}
+            <tbody id = 'logView' className='logBody'>
+            {jobsRow}
             </tbody>
         </Table>
     )
