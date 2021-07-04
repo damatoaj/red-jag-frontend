@@ -73,8 +73,8 @@ function DashBoard({ savedJobsArray }) {
         </tr>
     ))
     return (
-        <Table>
-            <thead>
+        <Table className="logTable">
+            <thead className='logHead'>
                 <tr>
                     <th>Jobs You Applied</th>
                     <th>Company</th>
@@ -86,7 +86,7 @@ function DashBoard({ savedJobsArray }) {
                     <th>Hide</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className='logBody'>
                 {jobsRow}
             </tbody>
         </Table>

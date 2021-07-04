@@ -11,3 +11,31 @@
     /* background-color: yellow; */
     padding: 0%;
 }
+
+.logHead{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    letter-spacing: 0.1px;
+
+    color: #540D6E;
+}
+
+.logBody{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 66px;
+    /* or 550% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+
+    color: #36393B;
+}

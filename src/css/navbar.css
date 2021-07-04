@@ -239,6 +239,12 @@
     top: 401px;
 }
 
+.logTable{
+    border: red;
+    border-width: 10px;
+}
+
+
 /*called by JobTable*/
 .jobDescription {
     white-space: pre-wrap;
