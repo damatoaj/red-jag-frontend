@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import '../../css/dashboard'
 import { IconContext } from 'react-icons/lib';
 import { 
     BsEyeSlash, 
@@ -53,38 +54,39 @@ function DashBoard({ savedJobsArray }) {
         setEditJob(savedJobsArray[index])
         editJob.status = status;
         editJob.comment = comment;
-        editJob.contact_info.contact_name = contactName;
-        editJob.contact_info.contact_email = contactEmail;
-        editJob.contact_info.contact_linkedin = contactLinkedIn;
+        contactInfo.push(contactName, contactEmail, contactLinkedIn)
+        console.log(contactInfo)
+        editJob.contact_info = contactInfo;
         console.log(editJob)
     };
 
     let jobsRow = savedJobsArray.map((savedJob, index) => (
             <tr>
+                <IconContext.Provider>
                 <th>{savedJob.title}</th>
                 <th>{savedJob.company_name}</th>
                 <th>{savedJob.detected_extensions.posted_at}</th>
                 <th>
                     <Dropdown>
-                        <Dropdown.Toggle variant="success">
-                            <BsEnvelope />    
+                        <Dropdown.Toggle   className="dashboardButton">
+                            <BsEnvelope size={20} />    
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
                             <input 
                                 name="name" 
-                                placeholder={savedJob.contact_info.contact_name ? savedJob.contact_info.contact_name : "Add Name"} 
+                                placeholder={savedJob.contact_info ? savedJob.contact_info[0] : "Add Name"} 
                                 onChange={contactNameChange}
                                 type="text"
                             />
                             <input 
                                 name="email" 
-                                placeholder={savedJob.contact_info.contact_email ? savedJob.contact_info.contact_email : "Add Email"} 
+                                placeholder={savedJob.contact_info ? savedJob.contact_info[1]: "Add Email"} 
                                 onChange={contactEmailChange}
                                 type="email"
                             />
                             <input 
                                 name="LinkedIn" 
-                                placeholder={savedJob.contact_info.contact_linkedin ? savedJob.contact_info.contact_linkedin : "Add LinkedIn"} 
+                                placeholder={savedJob.contact_info? savedJob.contact_info[2] : "Add LinkedIn"} 
                                 onChange={contactLinkedInChange}
                                 type="text"
                             />
@@ -106,14 +108,15 @@ function DashBoard({ savedJobsArray }) {
                 </th>
                 <th>
                     <Button className="dashboardButton" onClick={(e) => editJobChange(index)}>
-                        <BsPencil />
+                        <BsPencil size={20} />
                     </Button>
                 </th>
                 <th>
                     <Button className="dashboardButton">
-                        <BsEyeSlash />
+                        <BsEyeSlash size={20} />
                     </Button>
                 </th>
+                </IconContext.Provider>
             </tr>
     ))
     return (

@@ -15,6 +15,7 @@ export default function JobDetails({ data, savedJobsArray }) {
             return
         } else {
             savedJobsArray.push(theJob);
+            console.log(savedJobsArray)
         };
     };
 
