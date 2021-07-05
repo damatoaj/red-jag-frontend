@@ -16,3 +16,22 @@
 .dashboardButton:active{
     color:blue;
 }
+
+
+.eyeButton {
+    color:grey;
+    align-content: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 0%;
+    margin: 0;
+    border-color: transparent;
+}
+
+.eyeButton:hover{
+    color:red;
+}
+
+.eyeButton:active{
+    color:blue;
+}

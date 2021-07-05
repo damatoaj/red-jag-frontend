@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import '../../css/dashboard'
 import { IconContext } from 'react-icons/lib';
 import { 
     BsEyeSlash, 
@@ -68,7 +67,7 @@ function DashBoard({ savedJobsArray }) {
                 <th>{savedJob.detected_extensions.posted_at}</th>
                 <th>
                     <Dropdown>
-                        <Dropdown.Toggle   className="dashboardButton">
+                        <Dropdown.Toggle>
                             <BsEnvelope size={20} />    
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
@@ -107,12 +106,12 @@ function DashBoard({ savedJobsArray }) {
                     </input>
                 </th>
                 <th>
-                    <Button className="dashboardButton" onClick={(e) => editJobChange(index)}>
+                    <Button onClick={(e) => editJobChange(index)}>
                         <BsPencil size={20} />
                     </Button>
                 </th>
                 <th>
-                    <Button className="dashboardButton">
+                    <Button>
                         <BsEyeSlash size={20} />
                     </Button>
                 </th>
