@@ -27,9 +27,9 @@ export default function AuthPortal({ setAuthRedirect, authRedirect, setCurrentUs
     if (authRedirect) return <Redirect to='/portal/dashboard' />
 
     return (
-            <Container>
+            <Container className = 'loginWIndow'>
                 <Row>
-                    <Button onClick={handleClose}>Close</Button>
+                    <Button id = 'close-btn' onClick={handleClose}>Close</Button>
                 </Row>
                 <Row>
                     <Login  

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import '../../css/dashboard'
+import '../../css/dashboard.css'
 import { IconContext } from 'react-icons/lib';
-import { 
-    BsEyeSlash, 
+import {
+    BsEyeSlash,
     BsPencil,
     BsEnvelope
  } from 'react-icons/bs';
@@ -62,66 +62,66 @@ function DashBoard({ savedJobsArray }) {
 
     let jobsRow = savedJobsArray.map((savedJob, index) => (
             <tr>
-                <IconContext.Provider>
-                <th>{savedJob.title}</th>
-                <th>{savedJob.company_name}</th>
-                <th>{savedJob.detected_extensions.posted_at}</th>
-                <th>
+               <IconContext.Provider>
+                <td>{savedJob.title}</td>
+                <td>{savedJob.company_name}</td>
+                <td>{savedJob.detected_extensions.posted_at}</td>
+                <td>
                     <Dropdown>
                         <Dropdown.Toggle   className="dashboardButton">
-                            <BsEnvelope size={20} />    
+                            {/* <BsEnvelope size={20} /> */}
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                            <input 
-                                name="name" 
-                                placeholder={savedJob.contact_info ? savedJob.contact_info[0] : "Add Name"} 
+                            <input
+                                name="name"
+                                placeholder={savedJob.contact_info ? savedJob.contact_info[0] : "Add Name"}
                                 onChange={contactNameChange}
                                 type="text"
                             />
-                            <input 
-                                name="email" 
-                                placeholder={savedJob.contact_info ? savedJob.contact_info[1]: "Add Email"} 
+                            <input
+                                name="email"
+                                placeholder={savedJob.contact_info ? savedJob.contact_info[1]: "Add Email"}
                                 onChange={contactEmailChange}
                                 type="email"
                             />
-                            <input 
-                                name="LinkedIn" 
-                                placeholder={savedJob.contact_info? savedJob.contact_info[2] : "Add LinkedIn"} 
+                            <input
+                                name="LinkedIn"
+                                placeholder={savedJob.contact_info? savedJob.contact_info[2] : "Add LinkedIn"}
                                 onChange={contactLinkedInChange}
                                 type="text"
                             />
                         </Dropdown.Menu>
                     </Dropdown>
-                </th>
-                <th>
-                    <select name="status" onChange={statusChange}> 
+                </td>
+                <td>
+                    <select name="status" onChange={statusChange}>
                         <option value="none" selected disabled hidden>{savedJob.status?savedJob.status:'Default'}</option>
                         <option value="done" >Done</option>
                         <option value="follow_up">Follow Up</option>
                         <option value="act_now">Act Now</option>
                     </select>
-                </th>
-                <th>
+                </td>
+                <td>
                     <input placeholder={savedJob.comment? savedJob.comment: 'No Comments Yet'} onChange={commentChange}>
-                    
+
                     </input>
-                </th>
-                <th>
+                </td>
+                <td>
                     <Button className="dashboardButton" onClick={(e) => editJobChange(index)}>
-                        <BsPencil size={20} />
+                        {/* <BsPencil size={20} /> */}
                     </Button>
-                </th>
-                <th>
+                </td>
+                <td>
                     <Button className="dashboardButton">
-                        <BsEyeSlash size={20} />
+                        {/* <BsEyeSlash size={20} /> */}
                     </Button>
-                </th>
+                </td>
                 </IconContext.Provider>
             </tr>
     ))
     return (
             <Table>
-                <thead>
+                <thead className = 'logHead'>
                     <tr>
                         <th>Jobs You Applied</th>
                         <th>Company</th>
@@ -133,7 +133,7 @@ function DashBoard({ savedJobsArray }) {
                         <th>Hide</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className = 'logBody'>
                     {jobsRow}
                 </tbody>
             </Table>
