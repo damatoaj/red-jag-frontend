@@ -3,6 +3,7 @@ import logo from "../../Images/Group 32.jpg";
 import { Nav, Navbar, Button } from "react-bootstrap";
 import styled from "@emotion/styled";
 import { Link, Redirect } from 'react-router-dom';
+import '../../css/header.css'
 
 const StyledHeader = styled.div`
   display: flex;
@@ -18,7 +19,6 @@ const StyledButton = styled(Button)`
   border-radius: 2px;
 `;
 
-
 function AuthHeader({ 
     setAuthRedirect, 
     authRedirect, 
@@ -27,7 +27,6 @@ function AuthHeader({
     handleAuth 
 }) {
     const handleLogOut = (e) => {
-        console.log('click')
         handleAuth(null);
         setCurrentUser(null);
         setAuthRedirect(false);
@@ -36,7 +35,7 @@ function AuthHeader({
           console.log(currentUser, '&&&&&&&&')
         }
       };
-console.log(currentUser)
+      
       if(currentUser=== null) return <Redirect to='/' />
       
 
@@ -45,7 +44,7 @@ console.log(currentUser)
       <img src={logo} width="250" style={{}}></img>
 
       <Navbar expand="lg" variant="light">
-          <h1>Hello {currentUser.username}</h1>
+          <h1 className = 'showUsername'>Hello {currentUser.username}</h1>
         <Navbar.Brand href="#home"></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

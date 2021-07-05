@@ -17,7 +17,6 @@ function HeaderPortal({ currentUser, setCurrentUser, handleAuth }) {
     const handleClose = () => setShowAuth(false);
     const handleShow = (e) => {
         setShowAuth(true);
-        console.log(showAuth, 'click')
     }
 
     let conditionalHeader = currentUser ? 
