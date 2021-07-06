@@ -18,7 +18,6 @@ export default function TodoForm({
     e.preventDefault();
     if (!todoFormString || /^\s*$/.test(todoFormString)) {
       return;
-    }
 
     setTodoArray([
       ...todoArray,

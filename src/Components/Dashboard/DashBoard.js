@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import '../../css/dashboard.css'
 import { IconContext } from 'react-icons/lib';
 import {
     BsEyeSlash,
