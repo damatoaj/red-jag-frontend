@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -17,21 +18,37 @@ function JobTable({ displayData, setSavedJobsArray }) {
                 </Col>
                 <Col>
                     <span id = 'subtitle2_text'>Posted {displayData.display[0].detected_extensions.posted_at}</span>
-                    <span id = 'subtitle3_text'><Button id="star-btn"><FaStar/></Button> Save</span>
+                    {/* <span id = 'subtitle3_text'><Button id="star-btn"><FaStar/></Button> Save</span> */}
                 </Col>
             </Row>
             <Row>
                 <Col>
-                    <Button className="applyButtons">Apply on Google Careers</Button>
+                    <Button className="applyButtons" target="_blank">
+                        <a href="https://careers.google.com/">
+                            Apply on Google Careers
+                        </a>
+                    </Button>
                 </Col>
                 <Col>
-                    <Button className="applyButtons">Apply on LinkedIn</Button>
+                    <Button className="applyButtons">
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            Apply on LinkedIn
+                        </a>
+                    </Button>
                 </Col>
                 <Col>
-                    <Button className="applyButtons">Apply on ZipRecruiter</Button>
+                    <Button className="applyButtons" target="_blank">
+                        <a href="https://www.ziprecruiter.com/">
+                        Apply on ZipRecruiter
+                        </a>
+                    </Button>
                 </Col>
                 <Col>
-                    <Button className="applyButtons">Apply on Indeed</Button>
+                    <Button className="applyButtons" target="_blank">
+                        <a href="https://www.indeed.com">
+                            Apply on Indeed
+                        </a>
+                    </Button>
                 </Col>
             </Row>
             <Row>
