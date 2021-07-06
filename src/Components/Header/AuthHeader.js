@@ -12,12 +12,6 @@ const StyledHeader = styled.div`
     padding: 0 0.5rem;
   }
 `;
-const StyledButton = styled(Button)`
-  background: var(--color-purple);
-  padding: 0 2rem;
-  margin-left: 3rem;
-  border-radius: 2px;
-`;
 
 function AuthHeader({ 
     setAuthRedirect, 

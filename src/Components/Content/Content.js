@@ -13,7 +13,7 @@ function Content({ currentUser }) {
                 <Route 
                     path='/portal' 
                     render={() => {
-                        return <DashBoardPortal />
+                        return <DashBoardPortal currentUser={currentUser} />
                     }}
                 />
                 <Route 

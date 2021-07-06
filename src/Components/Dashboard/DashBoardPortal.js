@@ -16,8 +16,10 @@ import {
     Container
 } from 'react-bootstrap'
 
-function DashBoardPortal() {
-    const [savedJobsArray, setSavedJobsArray] = useState([]);
+function DashBoardPortal({ currentUser }) {
+    const [savedJobsArray, setSavedJobsArray] = useState(currentUser.saved_jobs);
+
+    console.log(currentUser.saved_jobs)
     return (
         <Container>
             <Row>

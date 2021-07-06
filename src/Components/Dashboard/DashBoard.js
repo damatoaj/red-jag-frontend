@@ -24,6 +24,8 @@ function DashBoard({ savedJobsArray }) {
     const [contactEmail, setContactEmail] = useState('');
     const [contactLinkedIn, setContactLinkedIn] = useState('');
 
+    console.log(savedJobsArray)
+
     const statusChange = (e) => {
         setStatus(e.target.value)
     };
@@ -67,7 +69,7 @@ function DashBoard({ savedJobsArray }) {
                <IconContext.Provider value={{className:'react-icons'}}>
                 <td>{savedJob.title}</td>
                 <td>{savedJob.company_name}</td>
-                <td>{savedJob.detected_extensions.posted_at}</td>
+                {/* <td>{savedJob.detected_extensions.posted_at}</td> */}
                 <td>
                     <Dropdown>
                         <Dropdown.Toggle   className="dashboardButton">
