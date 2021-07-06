@@ -10,8 +10,28 @@ function NLP() {
     // five columns (top five key phrases)
     console.log(keywords)
 
-    let keywordsRow = keywords.map((keyword, index) => (
-        <tr></tr>
+    let keywordsColumnOne = keywords.results_uni.map((keyword, index) => (
+        <tr>
+            <td>
+                {keyword}
+            </td>
+        </tr>
+    ))
+
+    let keywordsColumnTwo = keywords.results_bi.map((keyword, index) => (     
+        <tr>
+            <td>
+                {keyword}
+            </td>
+        </tr>
+    ))
+
+    let keywordsColumnThree = keywords.results_tri.map((keyword, index) => (
+        <tr>
+            <td>
+                {keyword}
+            </td>
+        </tr>
     ))
 
     return (
@@ -41,7 +61,15 @@ function NLP() {
                     </tr>
                 </thead>
                 <tbody>
-                    
+                    <td>
+                        {keywordsColumnOne}
+                    </td>
+                    <td>
+                        {keywordsColumnTwo}
+                    </td>
+                    <td>
+                        {keywordsColumnThree}
+                    </td>
                 </tbody>
             </Table>
         </div>
