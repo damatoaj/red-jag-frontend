@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../../css/analytics.css';
 
 import Map from './Map';
 import NLP from './NLP';

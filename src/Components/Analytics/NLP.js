@@ -1,7 +1,10 @@
 import React from 'react';
 import keywords from './dummyKeywords';
 import {
-    Table
+    Table,
+    Col,
+    Row,
+    Container
 } from 'react-bootstrap';
 
 function NLP() {
@@ -35,19 +38,20 @@ function NLP() {
     ))
 
     return (
-        <div>
-            <h1>NLP</h1>
-            <Table>
+        <Container className="nlpTable">
+            <Row className="rowOne">
+                <Col>
+                    <h2>Number of Jobs Compared:</h2>
+                </Col>
+                <Col md="auto">
+                    <h3>{keywords.num_jobs_compared}</h3>
+                </Col>
+            </Row>
+            <Row className="rowTwo">
+               <h2>Key Words</h2>
+            </Row>
+            <Table hover responsive borderless>
                 <thead>
-                    <tr>
-                        <th>Number of Jobs Compared</th>
-                        <th>{keywords.num_jobs_compared}</th>
-                    </tr>
-                    <tr>
-                        <th>
-                            Key Words
-                        </th>
-                    </tr>
                     <tr>
                         <th>
                             One Word 
@@ -72,7 +76,8 @@ function NLP() {
                     </td>
                 </tbody>
             </Table>
-        </div>
+
+        </Container>
     )
 }
 
