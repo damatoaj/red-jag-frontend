@@ -56,7 +56,7 @@ function AuthHeader({
             {/* <Link to="/">Home</Link> */}
             <Link to="/portal/jobs" className="headerLinks">Dashboard</Link>
             <Link to="/profile" className="headerLinks">Profile</Link>
-            <StyledButton onClick={handleLogOut}>Log Out</StyledButton>
+            <Button onClick={handleLogOut} className="headerButton">Log Out</Button>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

@@ -42,10 +42,9 @@ export default function Login({
         <Container className="authContainer hidden">
             <Row>
                 <Form className="authForm" onSubmit={loginHandler}>
-                <Form.Label>Login</Form.Label>
                 <Form.Group className="authUsernameGroup" >
                         <Form.Control 
-                            size="lg" 
+                            size="md" 
                             type="text" 
                             placeholder="Username" 
                             className="authUsernameControl" 
@@ -54,7 +53,7 @@ export default function Login({
                     </Form.Group>
                     <Form.Group className="authPasswordGroup" >
                         <Form.Control 
-                            size="lg" 
+                            size="md" 
                             type="password" 
                             placeholder="Password" 
                             className="authPasswordControl" 
@@ -63,8 +62,7 @@ export default function Login({
                     </Form.Group>
                     <Button 
                         className="authButton" 
-                        size="lg" 
-                        variant="primary" 
+                        size="sm" 
                         type="submit"
                     >
                         Log In
