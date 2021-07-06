@@ -54,7 +54,7 @@ export default function NavbarPortal({ savedJobsArray }) {
               <Row>
                 <Tabs>
                   <Tab tabClassName='jobTabs' eventKey="Jobs" title="Jobs"></Tab>
-                  <Tab tabClassName='jobTabs' eventKey="SaveJobs" title="Saved Jobs"></Tab>
+                  {/* <Tab tabClassName='jobTabs' eventKey="SaveJobs" title="Saved Jobs"></Tab> */}
                 </Tabs>
               </Row>
               <Row>

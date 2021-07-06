@@ -17,10 +17,10 @@ export default function Search({ setJobQuery }) {
 
     return (
                 <Navbar className='jobSearch'>
-                        <Col xs='auto'>
+                        {/* <Col xs='auto'>
                             <Button id = 'sort-btn'>Sort</Button>
                             <Button id = 'sort-btn'>Filter</Button>
-                        </Col>
+                        </Col> */}
                         <Col lg>
                             <InputGroup>
                                 <InputGroup.Prepend>

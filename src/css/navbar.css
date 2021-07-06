@@ -225,6 +225,7 @@
     line-height: 66px;
     align-content: center;
     text-align: center;
+    text-decoration: none;
     /* identical to box height, or 660% */
 
     display: flex;
@@ -294,6 +295,7 @@
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
     border-radius: 5px 0px 0px 5px;
     color: #FFFFFF;
+    text-decoration: none;
     
 }
 /*END*/
@@ -335,4 +337,8 @@
 
 #track-btn:active{
     color:green;
+
+a, a:hover, a:active {
+    text-decoration: none;
+
 }

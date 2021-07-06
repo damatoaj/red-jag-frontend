@@ -17,21 +17,37 @@ function JobTable({ displayData, setSavedJobsArray }) {
                 </Col>
                 <Col>
                     <span id = 'subtitle2_text'>Posted {displayData.display[0].detected_extensions.posted_at}</span>
-                    <span id = 'subtitle3_text'><Button id="star-btn"><FaStar/></Button> Save</span>
+                    {/* <span id = 'subtitle3_text'><Button id="star-btn"><FaStar/></Button> Save</span> */}
                 </Col>
             </Row>
             <Row>
                 <Col>
-                    <Button className="applyButtons">Apply on Google Careers</Button>
+                    <a href="https://careers.google.com/" target="_blank">
+                        <Button className="applyButtons">
+                                Apply on Google Careers
+                        </Button>
+                    </a>
                 </Col>
                 <Col>
-                    <Button className="applyButtons">Apply on LinkedIn</Button>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <Button className="applyButtons">
+                            Apply on LinkedIn
+                        </Button>
+                    </a>
                 </Col>
                 <Col>
-                    <Button className="applyButtons">Apply on ZipRecruiter</Button>
+                    <a href="https://www.ziprecruiter.com/" target="_blank">
+                        <Button className="applyButtons">
+                        Apply on ZipRecruiter
+                        </Button>
+                    </a>
                 </Col>
                 <Col>
-                    <Button className="applyButtons">Apply on Indeed</Button>
+                    <a href="https://www.indeed.com" target="_blank">
+                        <Button className="applyButtons">
+                            Apply on Indeed
+                        </Button>
+                    </a>
                 </Col>
             </Row>
             <Row>
