@@ -239,12 +239,12 @@
     top: 401px;
 }
 
+
 /*called by JobTable*/
 .jobDescription {
     white-space: pre-wrap;
     text-overflow:hidden;
     overflow: scroll;
-    height: 49vh;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;

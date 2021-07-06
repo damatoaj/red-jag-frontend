@@ -13,6 +13,7 @@ export default function TodoForm({ todoArray, todoFormString, setTodoFormString,
     };
 
     const submitTodoHandler = (e) => {
+        console.log('beginning of the function')
         e.preventDefault();
         if (!todoFormString || /^\s*$/.test(todoFormString)) {
             return;
@@ -22,6 +23,7 @@ export default function TodoForm({ todoArray, todoFormString, setTodoFormString,
             ...todoArray, { title:todoFormString, completed:false, id:Math.random()*10000, dueDate: new Date()}
         ]);
         setTodoFormString('');
+        console.log('end of the function')
     }
 
 
