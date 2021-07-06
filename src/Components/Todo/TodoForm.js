@@ -1,6 +1,6 @@
 import React from "react";
-
-import { Row, Container, Form, Button } from "react-bootstrap";
+import "../../css/todo.css";
+import { Row, Container, Form, Button, Col} from "react-bootstrap";
 
 export default function TodoForm({
   todoArray,
@@ -33,22 +33,30 @@ export default function TodoForm({
   };
 
   return (
-    <Container className="todoContainer">
-      <Row>
+    // <Container>
+      <Row className="todoBox1">
         <Form>
           <Form.Group>
-            <Form.Label>Create a Todo:</Form.Label>
-            <Form.Control
-              value={todoFormString}
-              type="text"
-              onChange={inputTextHandler}
-            />
-            <Button onClick={submitTodoHandler} type="submit">
-              Create
-            </Button>
+            <Row>
+              <Form.Label>Create a Todo:</Form.Label>
+            </Row>
+            <Row>
+              <Col xs={4} className="jobFormInput">
+                <Form.Control
+                  value={todoFormString}
+                  type="text"
+                  onChange={inputTextHandler}
+                />
+              </Col>
+              <Col>
+                <Button onClick={submitTodoHandler} type="submit">
+                  Create
+                </Button>
+              </Col>
+            </Row>
           </Form.Group>
         </Form>
       </Row>
-    </Container>
+    // </Container>
   );
 }

@@ -43,22 +43,20 @@ export default function TodoPortal() {
     };
 
     return (
-        <Container>
+        <Container className = "todoBox2">
             <Row>
-                <Col>
-                    <Row>
-                        <TodoForm 
-                            setTodoArray={setTodoArray} 
-                            setTodoFormString={setTodoFormString} 
-                            todoArray={todoArray}
-                            todoFormString={todoFormString}
-                        />
-                    </Row>
-                    <Row>
-                        <DisplayTodo displayTodo={displayTodo} setDisplayTodo={setDisplayTodo} completedArray={completedArray} setCompletedArray={setCompletedArray} />
-                    </Row>
+                <TodoForm 
+                    setTodoArray={setTodoArray} 
+                    setTodoFormString={setTodoFormString} 
+                    todoArray={todoArray}
+                    todoFormString={todoFormString}
+                />
+            </Row>
+            <Row>
+                <Col className="todoCol1">
+                    <DisplayTodo displayTodo={displayTodo} setDisplayTodo={setDisplayTodo} completedArray={completedArray} setCompletedArray={setCompletedArray} />
                 </Col>
-                <Col>
+                <Col className="todoCol2">
                     <TodoList 
                         todoArray={todoArray}
                         setTodoArray={setTodoArray}
