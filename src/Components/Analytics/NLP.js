@@ -49,6 +49,7 @@ function NLP() {
             </Row>
             <Row className="rowTwo">
                <h2>Key Words</h2>
+               <p>We took all of the jobs that you have applied for and put together lists of keywords that you can use to customize your future job searches!</p>
             </Row>
             <Table hover responsive borderless>
                 <thead>

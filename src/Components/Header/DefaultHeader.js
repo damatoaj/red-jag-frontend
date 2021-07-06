@@ -20,7 +20,7 @@ const StyledButton = styled(Button)`
 function DefaultHeader({ handleShow }) {
   return (
     <StyledHeader>
-      <img src={logo} width="250" style={{}}></img>
+      <img src={logo} className="headerLogo"></img>
 
       <Navbar expand="lg" variant="light">
         <Navbar.Brand href="#home"></Navbar.Brand>
@@ -31,9 +31,9 @@ function DefaultHeader({ handleShow }) {
             <Nav.Link href="#"></Nav.Link>
           </Nav>
           <Nav className="mr-auto">
-            <Nav.Link href="home">Home</Nav.Link>
+            {/* <Nav.Link href="home">Home</Nav.Link>
             <Nav.Link href="about">About</Nav.Link>
-            <Nav.Link href="contact">Contact</Nav.Link>
+            <Nav.Link href="contact">Contact</Nav.Link> */}
             <StyledButton onClick={handleShow}>Sign In</StyledButton>
           </Nav>
         </Navbar.Collapse>

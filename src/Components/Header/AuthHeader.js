@@ -41,7 +41,7 @@ function AuthHeader({
 
   return (
     <StyledHeader>
-      <img src={logo} width="250" style={{}}></img>
+      <img src={logo} className="headerLogo"></img>
 
       <Navbar expand="lg" variant="light">
           <h1 className ='showUsername'>Hello {currentUser.username}</h1>
@@ -53,9 +53,9 @@ function AuthHeader({
             <Nav.Link href="#"></Nav.Link>
           </Nav>
           <Nav className="mr-auto">
-            <Link to="/">Home</Link>
-            <Link to="/portal/jobs">Dashboard</Link>
-            <Link to="/profile">Profile</Link>
+            {/* <Link to="/">Home</Link> */}
+            <Link to="/portal/jobs" className="headerLinks">Dashboard</Link>
+            <Link to="/profile" className="headerLinks">Profile</Link>
             <StyledButton onClick={handleLogOut}>Log Out</StyledButton>
           </Nav>
         </Navbar.Collapse>

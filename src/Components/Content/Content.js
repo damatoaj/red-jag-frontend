@@ -19,7 +19,7 @@ function Content({ currentUser }) {
                 <Route 
                     path='/profile' 
                     render={() => {
-                        return <UserPortal />
+                        return <UserPortal currentUser={currentUser}/>
                     }}
                 />
             </Container>
