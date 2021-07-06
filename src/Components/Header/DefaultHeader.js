@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../Images/Group 32.jpg";
+import logo from "../../Images/TRKR.svg";
 import { Nav, Navbar, Button } from "react-bootstrap";
 import styled from "@emotion/styled";
 

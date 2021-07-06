@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { IconContext } from 'react-icons/lib';
+import '../../css/dashboard.css';
 import {
     BsEyeSlash,
     BsPencil,

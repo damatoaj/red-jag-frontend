@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../Images/Group 32.jpg";
+import logo from "../../Images/TRKR.svg";
 import { Nav, Navbar, Button } from "react-bootstrap";
 import styled from "@emotion/styled";
 import { Link, Redirect } from 'react-router-dom';
@@ -44,7 +44,7 @@ function AuthHeader({
       <img src={logo} width="250" style={{}}></img>
 
       <Navbar expand="lg" variant="light">
-          <h1 className = 'showUsername'>Hello {currentUser.username}</h1>
+          <h1 className ='showUsername'>Hello {currentUser.username}</h1>
         <Navbar.Brand href="#home"></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

@@ -50,19 +50,19 @@ export default function Footer() {
                 <h5 className="title">Social Media</h5>
                 <ul>
                   <li className="list-unstyled">
-                    {/* <a href="#!">Instagram</a> */}
+                    <a href="#!">Instagram</a>
                     <i class="fab fa-instagram"></i>
                   </li>
                   <li className="list-unstyled">
-                    {/* <a href="#!">Twitter</a> */}
+                    <a href="#!">Twitter</a>
                     <i class="fab fa-twitter"></i>
                   </li>
                   <li className="list-unstyled">
-                    {/* <a href="#!">Facebook</a> */}
+                    <a href="#!">Facebook</a>
                     <i class="fab fa-facebook"></i>
                   </li>
                   <li className="list-unstyled">
-                    {/* <a href="#!">Discord</a> */}
+                    <a href="#!">Discord</a>
                     <i className="fab fa-discord"></i>
                   </li>
                 </ul>

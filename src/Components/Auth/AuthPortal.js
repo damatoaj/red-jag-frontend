@@ -19,8 +19,8 @@ export default function AuthPortal({ setAuthRedirect, authRedirect, setCurrentUs
     const hidden = false;
 
     const dummyUser = {
-        username: 'John Doe',
-        email: 'johndoe@email.com',
+        username: 'James Tomlin',
+        email: 'jamestomlin@email.com',
         password: '123123123'
     }
 
