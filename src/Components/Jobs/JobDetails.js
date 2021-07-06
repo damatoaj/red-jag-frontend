@@ -33,8 +33,11 @@ export default function JobDetails({ data, savedJobsArray }) {
                         <Col><Card.Title>{job.title}</Card.Title></Col>
                         {/* ****test onCLick functionality code ****  onClick={() => alert('Hi! Admin')} */}
                         <Col xs={2}>
-                            <Button id="star-btn" onClick={(e)=> saveJobHandler(index)}>
-                                <FaStar size={20} />
+                            {/* <Button id="star-btn" onClick={(e)=> saveJobHandler(index)}>
+                                 <FaStar size={20} />
+                            </Button> */}
+                            <Button id="track-btn" onClick={(e)=> saveJobHandler(index)}>
+                                Track it!
                             </Button>
                         </Col>
 

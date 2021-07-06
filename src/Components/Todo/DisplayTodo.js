@@ -45,7 +45,7 @@ function DisplayTodo({ displayTodo, setDisplayTodo }) {
     };
 
     return (
-        <Container>
+        <Container className = "todoBox">
             <Row>
                 <Col>
                     <h1 onChange={deletedTodoHandler}>
