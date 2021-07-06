@@ -318,3 +318,21 @@
     box-shadow: -5px 0px 10px grey;
 
 }
+
+#track-btn {
+    color:grey;
+    align-content: center;
+    justify-content: center;
+    background-color: goldenrod;
+    padding: 0%;
+    margin: 0;
+    border-color: transparent;
+}
+
+#track-btn:hover{
+    color:purple;
+}
+
+#track-btn:active{
+    color:green;
+}

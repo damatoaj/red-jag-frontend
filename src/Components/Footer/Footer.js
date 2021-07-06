@@ -2,6 +2,8 @@ import React from "react";
 // import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import styled from "@emotion/styled";
 import { Container, Col, Row } from "react-bootstrap";
+import "../../css/footer.css"
+import { FaStar } from 'react-icons/fa';
 
 const StyledFooter = styled.div`
   background-color: var(--color-green);
@@ -29,7 +31,7 @@ export default function Footer() {
   return (
     <div>
       <StyledFooter>
-        <Container color="blue" className="font-small pt-4 mt-4">
+        <Container color="pink" className="font-small pt-4 mt-4">
           <Container fluid className="text-center text-md-left">
             <Row>
               <Col md="6">

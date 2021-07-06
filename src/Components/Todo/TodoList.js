@@ -6,8 +6,8 @@ import Todo from './Todo';
 export default function TodoList({ todoArray, setTodoArray, setDisplayTodo, completedArray, setCompletedArray, displayTodo }) { 
 
     return (
-        <div>
-           <h1>Things to do</h1>
+        <div className = "todoListView">
+           <h1 className = "todoTitle"> Things To Do</h1>
            <ul>
                 {todoArray.map((todo) => (
                     <Todo 
