@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -23,32 +22,32 @@ function JobTable({ displayData, setSavedJobsArray }) {
             </Row>
             <Row>
                 <Col>
-                    <Button className="applyButtons" target="_blank">
-                        <a href="https://careers.google.com/">
-                            Apply on Google Careers
-                        </a>
-                    </Button>
+                    <a href="https://careers.google.com/" target="_blank">
+                        <Button className="applyButtons">
+                                Apply on Google Careers
+                        </Button>
+                    </a>
                 </Col>
                 <Col>
-                    <Button className="applyButtons">
-                        <a href="https://www.linkedin.com/" target="_blank">
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <Button className="applyButtons">
                             Apply on LinkedIn
-                        </a>
-                    </Button>
+                        </Button>
+                    </a>
                 </Col>
                 <Col>
-                    <Button className="applyButtons" target="_blank">
-                        <a href="https://www.ziprecruiter.com/">
+                    <a href="https://www.ziprecruiter.com/" target="_blank">
+                        <Button className="applyButtons">
                         Apply on ZipRecruiter
-                        </a>
-                    </Button>
+                        </Button>
+                    </a>
                 </Col>
                 <Col>
-                    <Button className="applyButtons" target="_blank">
-                        <a href="https://www.indeed.com">
+                    <a href="https://www.indeed.com" target="_blank">
+                        <Button className="applyButtons">
                             Apply on Indeed
-                        </a>
-                    </Button>
+                        </Button>
+                    </a>
                 </Col>
             </Row>
             <Row>
