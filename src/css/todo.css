@@ -2,12 +2,16 @@
     background-color: aqua;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    font-size: 3rem;
+    width: 100%
 }
 
 .todoCard.complete {
     background-color: blue;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    font-size: 3rem;
+    width: 100%
 }
 
 .todoBox1{
