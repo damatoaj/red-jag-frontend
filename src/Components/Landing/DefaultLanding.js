@@ -17,11 +17,11 @@ function DefaultLanding({AuthPortal}) {
                 <Col lg='6' md='6' sm='6' id="landingColumnLeft">
                     <Row id="landingRowTop">
                         <h2>Hello...</h2>
-                        <h1>Welcome To Tracker</h1>
+                        <h1>Welcome To TRKR</h1>
                     </Row>
                     <Row id="landingRowMiddle">
                         <p>
-                            Tracker was designed to help job seekers in job searching, job applications, and networking endeavors.
+                            TRKR was designed to help job seekers in job searching, job applications, and networking endeavors.
                         </p>
                     </Row>
                     <Row id="landingRowThree">

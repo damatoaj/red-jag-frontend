@@ -41,14 +41,14 @@ export default function TodoForm({
               <Form.Label>Create a Todo:</Form.Label>
             </Row>
             <Row>
-              <Col xs={4} className="jobFormInput">
+              <Col className="jobFormInput">
                 <Form.Control
                   value={todoFormString}
                   type="text"
                   onChange={inputTextHandler}
                 />
               </Col>
-              <Col>
+              <Col className="jobFormButton">
                 <Button onClick={submitTodoHandler} type="submit">
                   Create
                 </Button>
