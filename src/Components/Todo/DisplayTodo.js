@@ -9,7 +9,7 @@ import {
     Form
 } from 'react-bootstrap'
 
-function DisplayTodo({ displayTodo, setDisplayTodo }) {
+function DisplayTodo({ displayTodo, setDisplayTodo, currentUser }) {
     const [todoText, setTodoText] = useState('');
     const [todoComplete, setTodoComplete] = useState(false);
     const [todoDueDate, setTodoDueDate] = useState('');
@@ -45,7 +45,7 @@ function DisplayTodo({ displayTodo, setDisplayTodo }) {
     };
 
     return (
-        <Container className = "todoBox">
+        <Container className = "displayTodo">
             <Row>
                 <Col>
                     <h1 onChange={deletedTodoHandler}>
@@ -56,20 +56,20 @@ function DisplayTodo({ displayTodo, setDisplayTodo }) {
             <Row>
                 <Form>
                     <Form.Group>
-                        <Form.Label>Completed</Form.Label>
+                        <Form.Label>Is it Completed?</Form.Label>
                         <Form.Check  
                             name="completed"
                             type="radio" 
                             onChange={completeHandler} 
                             value={true} 
-                            label="True"
+                            label="Yes"
                         />
                         <Form.Check 
                             name="completed" 
                             type="radio" 
                             onChange={completeHandler} 
                             value={false} 
-                            label="False"
+                            label="No"
                         />
                     </Form.Group>
                     <Form.Group>
@@ -80,7 +80,7 @@ function DisplayTodo({ displayTodo, setDisplayTodo }) {
                         <Form.Label>Notes</Form.Label>  
                         <Form.Control as="textarea" onChange={textChange} />
                     </Form.Group>
-                    <Button onClick={updateTodo} type='submit'>Update</Button>
+                    <Button onClick={updateTodo} type='submit' className="todoButtons">Update</Button>
                 </Form>
             </Row>
         </Container>

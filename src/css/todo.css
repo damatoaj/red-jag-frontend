@@ -2,12 +2,16 @@
     background-color: aqua;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    font-size: 3rem;
+    width: 100%
 }
 
 .todoCard.complete {
     background-color: blue;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    font-size: 3rem;
+    width: 100%
 }
 
 .todoBox1{
@@ -71,11 +75,29 @@
 }
 
 .todoCol2{
-    background-color: #FFAE00;
+    background-color: transparent;
 }
 
 .todoListView{
     background-color: whitesmoke;
     padding: 5px;
     margin: 5px;
+}
+
+.displayTodo {
+    border-left: #9F9F9F;
+    border-width: 1rem;
+}
+
+.todoButtons {
+    background-color: #540D6E;
+    border: .1rem solid #540D6E;
+    border-radius: .5rem;
+}
+
+.todoButtons:hover {
+    color:#540D6E;
+    background-color: white;
+    border: .1rem solid #540D6E;
+    transition: .5s ease;
 }

@@ -25,3 +25,38 @@
 .headerLogo {
     width: 13vw;
 }
+
+.loginModal {
+    height: 100vh;
+    
+}
+
+.headerButton {
+    background-color: #540D6E;
+    padding: .5rem;
+    margin: .5rem;
+    width: 100%;
+    border-radius: .1rem;
+    cursor:pointer;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+    border: .1rem solid black;
+    color: #FFFFFF;
+    border-radius: 1rem;
+}
+
+.headerButton:hover {
+    color:#540D6E;
+    background-color: white;
+    border: .1rem solid #540D6E;
+    transition: .5s ease;
+}
+
+.headerPortal {
+    height: 20vh;
+    margin: 0;
+}

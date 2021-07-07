@@ -12,12 +12,6 @@ const StyledHeader = styled.div`
     padding: 0 0.5rem;
   }
 `;
-const StyledButton = styled(Button)`
-  background: var(--color-purple);
-  padding: 0 2rem;
-  margin-left: 3rem;
-  border-radius: 2px;
-`;
 
 function AuthHeader({ 
     setAuthRedirect, 
@@ -56,7 +50,7 @@ function AuthHeader({
             {/* <Link to="/">Home</Link> */}
             <Link to="/portal/jobs" className="headerLinks">Dashboard</Link>
             <Link to="/profile" className="headerLinks">Profile</Link>
-            <StyledButton onClick={handleLogOut}>Log Out</StyledButton>
+            <Button onClick={handleLogOut} className="headerButton">Log Out</Button>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
