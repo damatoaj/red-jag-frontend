@@ -1,17 +1,113 @@
-.nlpTable {
-    text-align: center;
-    align-items: center;
+.demoMap {
+    width:100%;
 }
 
-.rowOne {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+.nlpTable{
+    text-align: center;
+    align-items: center;
+    /* background-color: teal; */
+    padding: 1rem;
+}
+
+.rowOne{
+    margin-top: 3rem;
+}
+
+.rowOne h2{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 1.5 rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: #540D6E;
+}
+
+.rowOne h3{
+    align-content: left;
 }
 
 .rowTwo {
     margin-bottom: 5vh;
+    padding: auto;
 }
 
-.demoMap {
-    width:100%;
+.rowTwo h2{
+    margin-top: 5rem;
+    font-family: Montserrat;
+    font-size: 3em;
+    color: #540D6E;
+    font-weight: bolder;
+    font-style: oblique;
+    background-color: transparent;
+}
+
+.nlpTable table{
+    text-align: center;
+    color: #75B204;
+    table-layout: fixed;
+    white-space: nowrap;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.nlpTable thead th{
+    color: #540D6E;
+    /* border-width: 1rem;
+    border-color: red; */
+    padding: 1rem;
+    text-decoration: underline;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    background: #EBEDF0;
+}
+
+.nlpTable td{
+    background: #EBEDF0;
+    text-overflow: ellipsis;
+    text-align: center;
+    justify-content: center;
+    width: 0.1%;
+    margin: 0;
+    padding:.5rem;
+}
+
+.nlpTable thead th:nth-child(1) {
+    width: 30%;
+  }
+  
+.nlpTable thead th:nth-child(2) {
+    width: 35%;
+  }
+  
+.nlpTable thead th:nth-child(3) {
+    width: auto;
+  }
+
+  #nlpText{
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    color: #36393B;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background: transparent;
+  }
+
+  #nlpTextBlock{
+      padding-top: 1rem;
+      padding-bottom: 3rem;
+      background-color: aliceblue;
+      border-radius: 1em;
+}
+
+#nlpTextBlock p{
+    background-color: transparent;
 }
