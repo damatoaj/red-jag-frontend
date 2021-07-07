@@ -27,7 +27,7 @@ function UserProfileTable() {
                 </Table>
             </Row>
             <Row>
-                <Button>Edit Profile</Button>
+                <Button className="profileButton">Edit Profile</Button>
             </Row>
         </Container>
     )

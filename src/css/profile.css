@@ -23,3 +23,18 @@
 .columnTwo {
     padding: 0;
 }
+
+.profileButton {
+    background-color: #540D6E;
+    border: .1rem solid #540D6E;
+    border-radius: .5rem;
+    margin: .3rem;
+    width: 8vw;
+}
+
+.profileButton:hover {
+    color:#540D6E;
+    background-color: white;
+    border: .1rem solid #540D6E;
+    transition: .5s ease;
+}

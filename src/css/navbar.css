@@ -226,6 +226,7 @@
     align-content: center;
     text-align: center;
     text-decoration: none;
+    margin: .5rem;
     /* identical to box height, or 660% */
 
     display: flex;
@@ -340,4 +341,8 @@
 }
 a, a:hover, a:active {
     text-decoration: none;
+}
+
+.profileIcon {
+    margin-top: 3rem;;
 }

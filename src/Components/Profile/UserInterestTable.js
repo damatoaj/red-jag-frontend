@@ -1,5 +1,5 @@
 import React from 'react'
-import {Table, Col, Row, Container, Button} from 'react-bootstrap';
+import {Table, Row, Container, Button} from 'react-bootstrap';
 
 function UserInterestTable() {
     return (
@@ -43,7 +43,7 @@ function UserInterestTable() {
                 </Table>
             </Row>
             <Row>
-                <Button>Edit</Button>
+                <Button className="profileButton">Edit</Button>
             </Row>
         </Container>
     )

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Route, Link } from 'react-router-dom';
+import '../../css/navbar.css'
 
 import DashBoardNav from './DashBoardNav';
 import JobsPortal from '../Jobs/JobsPortal';
@@ -28,7 +29,7 @@ function DashBoardPortal({ currentUser }) {
                     {/* '''calls DashbBoardNav which creates the NavBar() object the NavBar()''' */}
                         <DashBoardNav />
                     </Row>
-                    <Row>
+                    <Row className="profileIcon">
                         <Link to="/profile">
                             <FaUser size={50}/>
                         </Link>
