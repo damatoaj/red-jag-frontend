@@ -6,8 +6,6 @@ import NLP from './NLP';
 
 import {
     Container,
-    Row,
-    Col,
     Tabs,
     Tab
 } from 'react-bootstrap';
