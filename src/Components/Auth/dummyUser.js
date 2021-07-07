@@ -2,7 +2,26 @@ const dummyUser = {
     username: 'James Tomlin',
     email: 'jamestomlin@email.com',
     password: '123123123',
-    todos: [],
+    todo: [
+        {
+            title: 'Write a cover letter',
+            completed: false,
+            id: Math.random() * 10000,
+            dueDate: '07-12-2021'
+          },
+          {
+            title: "Update my resume",
+            completed: true,
+            id: Math.random() * 10000,
+            dueDate: `07-20-2021`
+          },
+          {
+            title: "Check Zillow for apartments",
+            completed: false,
+            id: Math.random() * 10000,
+            dueDate: '07-30-2021'
+          }
+    ],
     saved_jobs: [
             {
             "title": "UI\/UX Designer",

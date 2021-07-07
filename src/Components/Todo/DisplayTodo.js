@@ -9,7 +9,7 @@ import {
     Form
 } from 'react-bootstrap'
 
-function DisplayTodo({ displayTodo, setDisplayTodo }) {
+function DisplayTodo({ displayTodo, setDisplayTodo, currentUser }) {
     const [todoText, setTodoText] = useState('');
     const [todoComplete, setTodoComplete] = useState(false);
     const [todoDueDate, setTodoDueDate] = useState('');

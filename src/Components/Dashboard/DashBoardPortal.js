@@ -51,7 +51,7 @@ function DashBoardPortal({ currentUser }) {
                     <Route
                         path='/portal/todo'
                         render={()=> {
-                            return <TodoPortal />
+                            return <TodoPortal currentUser={currentUser} />
                         }}
                     />
                     <Route
