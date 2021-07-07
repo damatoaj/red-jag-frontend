@@ -35,13 +35,13 @@ export default  function Todo({ title, todoArray, setTodoArray, todo, setDisplay
 
  
     return (
-        <Container>
+        <Container className="todoCard">
             <Card className={todo.completed ? "todoCard complete" : "todoCard"}>
                 <Card.Body>
-                    <Card.Title>{title}</Card.Title>
+                    <Card.Title className="todoLabel">{title}</Card.Title>
                 </Card.Body>
-                <Card.Text>Is complete: {todo.completed}</Card.Text>
-                <Card.Text>{todo.dueDate}</Card.Text>
+                <Card.Text className="todoListText">Is complete: {todo.completed === true ? 'True' : 'False' }</Card.Text>
+                <Card.Text className="todoListText">{todo.dueDate? `Must be complete by ${todo.dueDate}` : 'No Due Date Selected'}</Card.Text>
                 <Button onClick={editHandler} className="todoButtons">Edit</Button>
                 <Button onClick={deleteHandler} className="todoButtons">Delete</Button>
             </Card>
