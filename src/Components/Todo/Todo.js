@@ -42,8 +42,8 @@ export default  function Todo({ title, todoArray, setTodoArray, todo, setDisplay
                 </Card.Body>
                 <Card.Text>Is complete: {todo.completed}</Card.Text>
                 <Card.Text>{todo.dueDate}</Card.Text>
-                <Button onClick={editHandler}>Edit</Button>
-                <Button onClick={deleteHandler}>Delete</Button>
+                <Button onClick={editHandler} className="todoButtons">Edit</Button>
+                <Button onClick={deleteHandler} className="todoButtons">Delete</Button>
             </Card>
         </Container>
     )

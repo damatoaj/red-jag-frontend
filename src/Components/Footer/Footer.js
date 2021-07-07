@@ -6,13 +6,12 @@ import "../../css/footer.css";
 
 const StyledFooter = styled.div`
   background-color: var(--color-green);
-  padding: 2rem;
-  height: 20%;
+  height: 5vh;
   width: 100%;
-  margin-top: 100%;
-  border-radius: 30%/100px 100px 0 0;
+  
+  border-style: wavy;
   color: var(--color-black);
-  font-size: 24px;
+  font-size: 1rem;
 
   a {
     text-decoration: none;
@@ -80,8 +79,7 @@ export default function Footer() {
           </Container>
           <div className="footer-copyright text-center py-3">
             <Container fluid>
-              &copy; {new Date().getFullYear()} Copyright:{" "}
-              <a href="https://www.ootstrap.com"> tracker.com </a>
+              &copy; {new Date().getFullYear()} Copyright: trker.com
             </Container>
           </div>
         </Container>

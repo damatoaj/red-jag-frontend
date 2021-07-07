@@ -53,7 +53,7 @@ export default function TodoForm({
               />
             </Col>
             <Col>
-              <Button onClick={submitTodoHandler}>
+              <Button onClick={submitTodoHandler} className="todoButtons">
                 Create
               </Button>
             </Col>

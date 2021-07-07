@@ -83,3 +83,21 @@
     padding: 5px;
     margin: 5px;
 }
+
+.displayTodo {
+    border-left: #9F9F9F;
+    border-width: 1rem;
+}
+
+.todoButtons {
+    background-color: #540D6E;
+    border: .1rem solid #540D6E;
+    border-radius: .5rem;
+}
+
+.todoButtons:hover {
+    color:#540D6E;
+    background-color: white;
+    border: .1rem solid #540D6E;
+    transition: .5s ease;
+}

@@ -34,7 +34,7 @@ function HeaderPortal({ currentUser, setCurrentUser, handleAuth }) {
         />;
 
     return (
-        <Container>
+        <Container className="headerPortal">
             {conditionalHeader}
             <Modal show={showAuth} className="loginModal">
                 <AuthPortal 

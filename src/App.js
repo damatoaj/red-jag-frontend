@@ -7,7 +7,6 @@ import { Container } from "react-bootstrap";
 import HeaderPortal from "./Components/Header/HeaderPortal";
 import Content from "./Components/Content/Content";
 import LandingPortal from "./Components/Landing/LandingPortal";
-import Footer from "./Components/Footer/Footer";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -33,7 +32,6 @@ function App() {
       />
       <Route exact path="/" component={LandingPortal} />
       <Content currentUser={currentUser} />
-      <Footer />
     </Container>
   );
 }
