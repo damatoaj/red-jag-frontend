@@ -27,6 +27,7 @@
     line-height: 17px;
     letter-spacing: 0.1px;
     color: #540D6E;
+    transition: 1s ease;
 }
 
 .nav-tabs .nav-link:hover{
@@ -297,7 +298,7 @@
     border-radius: 5px 0px 0px 5px;
     color: #FFFFFF;
     text-decoration: none;
-    
+    transition: 1s ease;
 }
 /*END*/
 
@@ -327,13 +328,14 @@
     align-content: center;
     justify-content: center;
     background-color: goldenrod;
-    padding: 0%;
+    padding: .3rem;
     margin: 0;
     border-color: transparent;
 }
 
 #track-btn:hover{
     color:purple;
+    transition: 1s ease;
 }
 
 #track-btn:active{
