@@ -1,51 +1,50 @@
-import React from 'react'
-import { Redirect } from 'react-router-dom';
-import '../../css/auth.css';
+import React from "react";
+import { Redirect } from "react-router-dom";
+import "../../css/auth.css";
 
 //import components
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
-export default function Signup({ 
-    username, 
-    email, 
-    password, 
-    setUsername, 
-    setEmail, 
-    setPassword, 
-    handleClose, 
-    dummyUser, 
-    handleAuth, 
-    authRedirect,
-    setAuthRedirect
+export default function Signup({
+  username,
+  email,
+  password,
+  setUsername,
+  setEmail,
+  setPassword,
+  handleClose,
+  dummyUser,
+  handleAuth,
+  authRedirect,
+  setAuthRedirect
 }) {
-    const usernameHandler = (e) => {
-        setUsername(e.target.value);
-    };
+  const usernameHandler = (e) => {
+    setUsername(e.target.value);
+  };
 
-    const emailHandler = (e) => {
-        setEmail(e.target.value);
-    };
+  const emailHandler = (e) => {
+    setEmail(e.target.value);
+  };
 
-    const passwordHandler = (e) => {
-        setPassword(e.target.value);
-    };
+  const passwordHandler = (e) => {
+    setPassword(e.target.value);
+  };
 
-    const submitHandler = (e) => {
-        e.preventDefault();
-        console.log('signup')
-        if (username !== '' && email !== '' && password !== '') {
-            handleAuth(dummyUser);
-            handleClose();
-            setAuthRedirect(true);
-        }
-    };
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log("signup");
+    if (username !== "" && email !== "" && password !== "") {
+      handleAuth(dummyUser);
+      handleClose();
+      setAuthRedirect(true);
+    }
+  };
 
-    //token coming back will be user{id, email, username}
+  //token coming back will be user{id, email, username}
 
-    
     return (
         <Container className="authContainer">
         <Row>
@@ -81,5 +80,5 @@ export default function Signup({
             </Form>
         </Row>
     </Container>
-    )
+  );
 }
