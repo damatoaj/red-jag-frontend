@@ -13,7 +13,7 @@ import {
 } from 'react-bootstrap';
 
 function AnalyticsPortal() {
-    const [activeTab, setActiveTab] = useState('map')
+    const [activeTab, setActiveTab] = useState('nlp')
 
     return (
         <Container>
@@ -22,11 +22,11 @@ function AnalyticsPortal() {
                 activeKey={activeTab}
                 onSelect={(k) => setActiveTab(k)}
             >
-                <Tab eventKey='map'title="Job Map">
-                    <Map />
-                </Tab>
                 <Tab eventKey='nlp' title="NLP Analysis">
                     <NLP />
+                </Tab>
+                <Tab eventKey='map'title="Job Map">
+                    <Map />
                 </Tab>
             </Tabs>
         </Container>

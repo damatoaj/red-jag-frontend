@@ -10,7 +10,13 @@
 }
 
 .dashboardButton:hover{
-    color:red;
+    color: #540D6E;
+    background-color: transparent;
+}
+
+.dashboardButton:active {
+    color: #540D6E;
+    background-color: transparent;
 }
 
 .col:last-of-type{

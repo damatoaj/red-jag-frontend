@@ -48,7 +48,7 @@ function DisplayTodo({ displayTodo, setDisplayTodo, currentUser }) {
         <Container className = "displayTodo">
             <Row>
                 <Col>
-                    <h1 onChange={deletedTodoHandler}>
+                    <h1 onChange={deletedTodoHandler} className="displayTodoTitle">
                         {displayTodo.title ? displayTodo.title : 'Select A Todo'}
                     </h1>
                 </Col>

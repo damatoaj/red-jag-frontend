@@ -37,7 +37,7 @@ export default function JobDetails({ data, savedJobsArray }) {
                                  <FaStar size={20} />
                             </Button> */}
                             <Button id="track-btn" onClick={(e)=> saveJobHandler(index)}>
-                                Track it!
+                                Trk It!
                             </Button>
                         </Col>
 

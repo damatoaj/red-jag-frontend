@@ -45,7 +45,7 @@
     /* identical to box height */
 
     letter-spacing: 0.1rem;
-
+    border-left: 1rem solid #9F9F9F;
     color: #9F9F9F;
 }
 
@@ -72,8 +72,6 @@
 }
 
 .todoCol1{
-    border: #9F9F9F;
-    border-width: 1rem;
     margin: 1rem;
     background-color:transparent;
     padding: 1rem;
@@ -81,12 +79,12 @@
 
 .todoCol2{
     background-color: transparent;
+    margin: 1rem;
+    padding: 1rem;
 }
 
-.todoListView{
-    background-color: whitesmoke;
-    padding: 5px;
-    margin: 5px;
+.todoListView {
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -129,4 +127,9 @@
 .todoList {
     place-items: left;
     padding: 0;
+}
+
+.displayTodoTitle {
+    color: #540D6E;
+    text-decoration: #540D6E underline;
 }
