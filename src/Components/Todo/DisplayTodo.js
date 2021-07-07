@@ -49,7 +49,7 @@ function DisplayTodo({ displayTodo, setDisplayTodo, currentUser }) {
             <Row>
                 <Col>
                     <h1 onChange={deletedTodoHandler}>
-                        {displayTodo.title}
+                        {displayTodo.title ? displayTodo.title : 'Select A Todo'}
                     </h1>
                 </Col>
             </Row>

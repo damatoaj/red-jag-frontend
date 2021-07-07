@@ -13,9 +13,9 @@ export default function TodoList({
 }) { 
 
     return (
-        <div className = "todoListView">
-           <h1 className = "todoTitle"> Things To Do</h1>
-           <ul>
+        <div className="todoListView">
+           <h1 className="todoTitle"> Things To Do</h1>
+           <ul className="todoList">
                 {todoArray?.map((todo) => (
                     <Todo 
                         todo={todo}
