@@ -50,10 +50,9 @@ export default function Signup({
         <Container className="authContainer">
         <Row>
             <Form className="authForm" onSubmit={submitHandler}>
-            <Form.Label>Signup</Form.Label>
             <Form.Group className="authUsernameGroup" >
                         <Form.Control 
-                            size="lg" 
+                            size="md" 
                             type="text" 
                             placeholder="Username" 
                             className="authUsernameControl"
@@ -62,7 +61,7 @@ export default function Signup({
                     </Form.Group>
                 <Form.Group controlId="formBasicEmail" className="authEmailGroup">
                     <Form.Control 
-                        size="lg" 
+                        size="md" 
                         type="email" 
                         placeholder="Email" 
                         className="authEmailControl" 
@@ -71,14 +70,14 @@ export default function Signup({
                 </Form.Group>
                 <Form.Group controlId="formBasicPassword" className="authPasswordGroup" >
                     <Form.Control 
-                        size="lg" 
+                        size="md" 
                         type="password" 
                         placeholder="Password" 
                         className="authPasswordControl" 
                         onChange={passwordHandler}
                     />
                 </Form.Group>
-                <Button className="authButton" size="lg" variant="primary" type="submit">Sign Up</Button>
+                <Button className="authButton" size="md" variant="primary" type="submit">Sign Up</Button>
             </Form>
         </Row>
     </Container>

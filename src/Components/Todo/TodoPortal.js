@@ -11,12 +11,15 @@ import {
     Col 
 } from 'react-bootstrap'
 
-export default function TodoPortal() {
+export default function TodoPortal({ currentUser }) {
     //set States
     const [todoFormString, setTodoFormString] = useState('');
     const [todoArray, setTodoArray] = useState([]);
     const [displayTodo, setDisplayTodo] = useState({});
     const [completedArray, setCompletedArray] = useState([]);
+    console.log(currentUser)
+    console.log(currentUser.todo)
+    console.log(todoArray)
 
     useEffect(() => {
         getLocalTodos();
@@ -38,7 +41,8 @@ export default function TodoPortal() {
             localStorage.setItem('todos', JSON.stringify([]));
         } else {
             let todoLocal = JSON.parse(localStorage.getItem('todos'));
-            setTodoArray(todoLocal);
+            // setTodoArray(todoLocal);
+            setTodoArray(currentUser.todo);
         }
     };
 
@@ -50,11 +54,18 @@ export default function TodoPortal() {
                     setTodoFormString={setTodoFormString} 
                     todoArray={todoArray}
                     todoFormString={todoFormString}
+                    currentUser={currentUser}
                 />
             </Row>
             <Row>
                 <Col className="todoCol1">
-                    <DisplayTodo displayTodo={displayTodo} setDisplayTodo={setDisplayTodo} completedArray={completedArray} setCompletedArray={setCompletedArray} />
+                    <DisplayTodo 
+                        displayTodo={displayTodo} 
+                        setDisplayTodo={setDisplayTodo} 
+                        completedArray={completedArray} 
+                        setCompletedArray={setCompletedArray} 
+                        currentUser={currentUser}
+                    />
                 </Col>
                 <Col className="todoCol2">
                     <TodoList 

@@ -1,5 +1,4 @@
 import React from "react";
-// import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import styled from "@emotion/styled";
 import { Container, Col, Row } from "react-bootstrap";
 import "../../css/footer.css"
@@ -53,15 +52,15 @@ export default function Footer() {
                 <ul>
                   <li className="list-unstyled">
                     <a href="#!">Instagram</a>
-                    <i class="fab fa-instagram"></i>
+                    <i className="fab fa-instagram"></i>
                   </li>
                   <li className="list-unstyled">
                     <a href="#!">Twitter</a>
-                    <i class="fab fa-twitter"></i>
+                    <i className="fab fa-twitter"></i>
                   </li>
                   <li className="list-unstyled">
                     <a href="#!">Facebook</a>
-                    <i class="fab fa-facebook"></i>
+                    <i className="fab fa-facebook"></i>
                   </li>
                   <li className="list-unstyled">
                     <a href="#!">Discord</a>

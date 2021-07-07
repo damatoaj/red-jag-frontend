@@ -36,7 +36,7 @@ function HeaderPortal({ currentUser, setCurrentUser, handleAuth }) {
     return (
         <Container>
             {conditionalHeader}
-            <Modal show={showAuth}>
+            <Modal show={showAuth} className="loginModal">
                 <AuthPortal 
                     setShowAuth={setShowAuth}
                     handleClose={handleClose}

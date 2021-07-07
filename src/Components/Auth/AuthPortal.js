@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
+import { FaWindowClose } from 'react-icons/fa'
 import '../../css/auth.css';
+import dummyUser from './dummyUser';
 
 //import components
 import {
@@ -18,18 +20,14 @@ export default function AuthPortal({ setAuthRedirect, authRedirect, setCurrentUs
     const [password, setPassword] = useState('');
     const hidden = false;
 
-    const dummyUser = {
-        username: 'James Tomlin',
-        email: 'jamestomlin@email.com',
-        password: '123123123'
-    }
-
     if (authRedirect) return <Redirect to='/portal/dashboard' />
 
     return (
-            <Container className = 'loginWIndow'>
+            <Container id='loginWindow'>
                 <Row>
-                    <Button id = 'close-btn' onClick={handleClose}>Close</Button>
+                    <Button id='close-btn' onClick={handleClose}>
+                        <FaWindowClose size={20} className="closeButtonIcon"/>
+                    </Button>
                 </Row>
                 <Row>
                     <Login  
