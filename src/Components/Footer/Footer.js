@@ -1,7 +1,8 @@
 import React from "react";
-// import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import styled from "@emotion/styled";
 import { Container, Col, Row } from "react-bootstrap";
+import { FaFacebook, FaDiscord, FaTwitter, FaInstagram } from "react-icons/fa";
+import "../../css/footer.css";
 
 const StyledFooter = styled.div`
   background-color: var(--color-green);
@@ -23,13 +24,17 @@ const StyledFooter = styled.div`
     cursor: pointer;
     color: var(--color-orange);
   }
+
+  * {
+    background-color: var(--color-green);
+  }
 `;
 
 export default function Footer() {
   return (
     <div>
       <StyledFooter>
-        <Container color="blue" className="font-small pt-4 mt-4">
+        <Container className="font-small pt-4 mt-4">
           <Container fluid className="text-center text-md-left">
             <Row>
               <Col md="6">
@@ -47,23 +52,27 @@ export default function Footer() {
                 </ul>
               </Col>
               <Col md="6">
-                <h5 className="title">Social Media</h5>
+                <h5 className="social"> Social Media:</h5>
                 <ul>
                   <li className="list-unstyled">
-                    <a href="#!">Instagram</a>
-                    <i class="fab fa-instagram"></i>
+                    <a href="#!">
+                      <FaInstagram />
+                    </a>
                   </li>
                   <li className="list-unstyled">
-                    <a href="#!">Twitter</a>
-                    <i class="fab fa-twitter"></i>
+                    <a href="#!">
+                      <FaTwitter />
+                    </a>
                   </li>
                   <li className="list-unstyled">
-                    <a href="#!">Facebook</a>
-                    <i class="fab fa-facebook"></i>
+                    <a href="#!">
+                      <FaFacebook />
+                    </a>
                   </li>
                   <li className="list-unstyled">
-                    <a href="#!">Discord</a>
-                    <i className="fab fa-discord"></i>
+                    <a href="#!">
+                      <FaDiscord />
+                    </a>
                   </li>
                 </ul>
               </Col>
