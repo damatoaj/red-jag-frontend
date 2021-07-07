@@ -23,6 +23,7 @@ function App() {
     }
   };
 
+  console.log(currentUser)
   return (    
     <Container>
       <HeaderPortal 

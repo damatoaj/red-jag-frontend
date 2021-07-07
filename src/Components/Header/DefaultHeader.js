@@ -11,16 +11,11 @@ const StyledHeader = styled.div`
     padding: 0 0.5rem;
   }
 `;
-const StyledButton = styled(Button)`
-  background: var(--color-purple);
-  padding: 0 2rem;
-  margin-left: 3rem;
-  border-radius: 2px;
-`;
+
 function DefaultHeader({ handleShow }) {
   return (
     <StyledHeader>
-      <img src={logo} width="250" style={{}}></img>
+      <img src={logo} className="headerLogo"></img>
 
       <Navbar expand="lg" variant="light">
         <Navbar.Brand href="#home"></Navbar.Brand>
@@ -31,10 +26,10 @@ function DefaultHeader({ handleShow }) {
             <Nav.Link href="#"></Nav.Link>
           </Nav>
           <Nav className="mr-auto">
-            <Nav.Link href="home">Home</Nav.Link>
+            {/* <Nav.Link href="home">Home</Nav.Link>
             <Nav.Link href="about">About</Nav.Link>
-            <Nav.Link href="contact">Contact</Nav.Link>
-            <StyledButton onClick={handleShow}>Sign In</StyledButton>
+            <Nav.Link href="contact">Contact</Nav.Link> */}
+            <Button onClick={handleShow} className="headerButton">Sign In</Button>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

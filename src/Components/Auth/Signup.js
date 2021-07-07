@@ -45,51 +45,40 @@ export default function Signup({
 
   //token coming back will be user{id, email, username}
 
-  return (
-    <Container className="authContainer">
-      <Row>
-        <Form className="authForm" onSubmit={submitHandler}>
-          <Form.Label>Signup</Form.Label>
-          <Form.Group className="authUsernameGroup">
-            <Form.Control
-              size="lg"
-              type="text"
-              placeholder="Username"
-              className="authUsernameControl"
-              onChange={usernameHandler}
-            />
-          </Form.Group>
-          <Form.Group controlId="formBasicEmail" className="authEmailGroup">
-            <Form.Control
-              size="lg"
-              type="email"
-              placeholder="Email"
-              className="authEmailControl"
-              onChange={emailHandler}
-            />
-          </Form.Group>
-          <Form.Group
-            controlId="formBasicPassword"
-            className="authPasswordGroup"
-          >
-            <Form.Control
-              size="lg"
-              type="password"
-              placeholder="Password"
-              className="authPasswordControl"
-              onChange={passwordHandler}
-            />
-          </Form.Group>
-          <Button
-            className="authButton"
-            size="lg"
-            variant="primary"
-            type="submit"
-          >
-            Sign Up
-          </Button>
-        </Form>
-      </Row>
+    return (
+        <Container className="authContainer">
+        <Row>
+            <Form className="authForm" onSubmit={submitHandler}>
+            <Form.Group className="authUsernameGroup" >
+                        <Form.Control 
+                            size="md" 
+                            type="text" 
+                            placeholder="Username" 
+                            className="authUsernameControl"
+                            onChange={usernameHandler} 
+                        />
+                    </Form.Group>
+                <Form.Group controlId="formBasicEmail" className="authEmailGroup">
+                    <Form.Control 
+                        size="md" 
+                        type="email" 
+                        placeholder="Email" 
+                        className="authEmailControl" 
+                        onChange={emailHandler}
+                    />
+                </Form.Group>
+                <Form.Group controlId="formBasicPassword" className="authPasswordGroup" >
+                    <Form.Control 
+                        size="md" 
+                        type="password" 
+                        placeholder="Password" 
+                        className="authPasswordControl" 
+                        onChange={passwordHandler}
+                    />
+                </Form.Group>
+                <Button className="authButton" size="md" variant="primary" type="submit">Sign Up</Button>
+            </Form>
+        </Row>
     </Container>
   );
 }

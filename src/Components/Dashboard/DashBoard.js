@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { IconContext } from 'react-icons/lib';
 import '../../css/dashboard.css';
+// import { FaPencilAlt, FaEyeSlash, FaEnvelope } from 'react-icons/fa';
+
 import {
     BsEyeSlash,
     BsPencil,
@@ -21,6 +23,8 @@ function DashBoard({ savedJobsArray }) {
     const [contactName, setContactName] = useState('');
     const [contactEmail, setContactEmail] = useState('');
     const [contactLinkedIn, setContactLinkedIn] = useState('');
+
+    console.log(savedJobsArray)
 
     const statusChange = (e) => {
         setStatus(e.target.value)
@@ -62,14 +66,16 @@ function DashBoard({ savedJobsArray }) {
 
     let jobsRow = savedJobsArray.map((savedJob, index) => (
             <tr>
-               <IconContext.Provider>
+               <IconContext.Provider value={{className:'react-icons'}}>
                 <td>{savedJob.title}</td>
                 <td>{savedJob.company_name}</td>
-                <td>{savedJob.detected_extensions.posted_at}</td>
+                {/* <td>{savedJob.detected_extensions.posted_at}</td> */}
                 <td>
                     <Dropdown>
                         <Dropdown.Toggle   className="dashboardButton">
-                            {/* <BsEnvelope size={20} /> */}
+                            <BsEnvelope size={20} />
+                            {/* <FaEnvelope size={20} /> */}
+
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
                             <input
@@ -108,12 +114,14 @@ function DashBoard({ savedJobsArray }) {
                 </td>
                 <td>
                     <Button className="dashboardButton" onClick={(e) => editJobChange(index)}>
-                        {/* <BsPencil size={20} /> */}
+                        <BsPencil size={20} />
+                        {/* <FaPencilAlt size={20} /> */}
                     </Button>
                 </td>
                 <td>
                     <Button className="dashboardButton">
-                        {/* <BsEyeSlash size={20} /> */}
+                        <BsEyeSlash size={20} />
+                        {/* <FaEyeSlash size={20} /> */}
                     </Button>
                 </td>
                 </IconContext.Provider>

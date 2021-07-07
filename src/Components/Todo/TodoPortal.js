@@ -11,12 +11,15 @@ import {
     Col 
 } from 'react-bootstrap'
 
-export default function TodoPortal() {
+export default function TodoPortal({ currentUser }) {
     //set States
     const [todoFormString, setTodoFormString] = useState('');
     const [todoArray, setTodoArray] = useState([]);
     const [displayTodo, setDisplayTodo] = useState({});
     const [completedArray, setCompletedArray] = useState([]);
+    console.log(currentUser)
+    console.log(currentUser.todo)
+    console.log(todoArray)
 
     useEffect(() => {
         getLocalTodos();
@@ -38,27 +41,33 @@ export default function TodoPortal() {
             localStorage.setItem('todos', JSON.stringify([]));
         } else {
             let todoLocal = JSON.parse(localStorage.getItem('todos'));
-            setTodoArray(todoLocal);
+            // setTodoArray(todoLocal);
+            setTodoArray(currentUser.todo);
         }
     };
 
     return (
-        <Container>
+        <Container className = "todoBox2">
             <Row>
-                <Col>
-                    <Row>
-                        <TodoForm 
-                            setTodoArray={setTodoArray} 
-                            setTodoFormString={setTodoFormString} 
-                            todoArray={todoArray}
-                            todoFormString={todoFormString}
-                        />
-                    </Row>
-                    <Row>
-                        <DisplayTodo displayTodo={displayTodo} setDisplayTodo={setDisplayTodo} completedArray={completedArray} setCompletedArray={setCompletedArray} />
-                    </Row>
+                <TodoForm 
+                    setTodoArray={setTodoArray} 
+                    setTodoFormString={setTodoFormString} 
+                    todoArray={todoArray}
+                    todoFormString={todoFormString}
+                    currentUser={currentUser}
+                />
+            </Row>
+            <Row>
+                <Col className="todoCol1">
+                    <DisplayTodo 
+                        displayTodo={displayTodo} 
+                        setDisplayTodo={setDisplayTodo} 
+                        completedArray={completedArray} 
+                        setCompletedArray={setCompletedArray} 
+                        currentUser={currentUser}
+                    />
                 </Col>
-                <Col>
+                <Col className="todoCol2">
                     <TodoList 
                         todoArray={todoArray}
                         setTodoArray={setTodoArray}

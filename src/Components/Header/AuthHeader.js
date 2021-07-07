@@ -12,12 +12,6 @@ const StyledHeader = styled.div`
     padding: 0 0.5rem;
   }
 `;
-const StyledButton = styled(Button)`
-  background: var(--color-purple);
-  padding: 0 2rem;
-  margin-left: 3rem;
-  border-radius: 2px;
-`;
 
 function AuthHeader({ 
     setAuthRedirect, 
@@ -41,7 +35,7 @@ function AuthHeader({
 
   return (
     <StyledHeader>
-      <img src={logo} width="250" style={{}}></img>
+      <img src={logo} className="headerLogo"></img>
 
       <Navbar expand="lg" variant="light">
           <h1 className ='showUsername'>Hello {currentUser.username}</h1>
@@ -53,10 +47,10 @@ function AuthHeader({
             <Nav.Link href="#"></Nav.Link>
           </Nav>
           <Nav className="mr-auto">
-            <Link to="/">Home</Link>
-            <Link to="/portal/jobs">Dashboard</Link>
-            <Link to="/profile">Profile</Link>
-            <StyledButton onClick={handleLogOut}>Log Out</StyledButton>
+            {/* <Link to="/">Home</Link> */}
+            <Link to="/portal/jobs" className="headerLinks">Dashboard</Link>
+            <Link to="/profile" className="headerLinks">Profile</Link>
+            <Button onClick={handleLogOut} className="headerButton">Log Out</Button>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
