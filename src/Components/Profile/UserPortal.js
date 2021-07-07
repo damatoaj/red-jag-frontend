@@ -20,11 +20,6 @@ export default function UserPortal({ currentUser }) {
         <Row className="userPortal">
             <Col md={3} className="columnOne">
                 <img src={headshot} className="headshot" />
-                <Link to="/portal/jobs">
-                    <Button id="dashboardBtn" variant="primary" size="lg" active>
-                        Back to your dashboard
-                    </Button>
-                </Link>
             </Col>
             <Col fluid md="auto" className="columnTwo">
                 <ProfileBasicInfo currentUser={currentUser}/>
