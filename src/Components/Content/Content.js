@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Redirect } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+import "../../App.css";
 
 
 import DashBoardPortal from '../Dashboard/DashBoardPortal'; 
@@ -9,7 +10,7 @@ import UserPortal from '../Profile/UserPortal';
 function Content({ currentUser }) {
 
     let conditionalContent = currentUser !== null ?
-            <Container>
+            <Container className="contentContainer">
                 <Route 
                     path='/portal' 
                     render={() => {
@@ -24,14 +25,14 @@ function Content({ currentUser }) {
                 />
             </Container>
         : 
-            <Container>
+            <Container className="contentContainer">
                 <Redirect  to='/' />
             </Container>
 
     return (
-        <Container>
+        <>
             {conditionalContent}
-        </Container>
+        </>
     )
 }
 

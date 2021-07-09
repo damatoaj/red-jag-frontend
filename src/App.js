@@ -24,7 +24,7 @@ function App() {
 
   console.log(currentUser)
   return (    
-    <Container>
+    <div id="appContainer">
       <HeaderPortal 
         currentUser={currentUser}
         setCurrentUser={setCurrentUser}
@@ -32,7 +32,7 @@ function App() {
       />
       <Route exact path="/" component={LandingPortal} />
       <Content currentUser={currentUser} />
-    </Container>
+    </div>
   );
 }
 

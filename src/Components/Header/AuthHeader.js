@@ -5,14 +5,6 @@ import styled from "@emotion/styled";
 import { Link, Redirect } from 'react-router-dom';
 import '../../css/header.css'
 
-const StyledHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  > img {
-    padding: 0 0.5rem;
-  }
-`;
-
 function AuthHeader({ 
     setAuthRedirect, 
     authRedirect, 
@@ -34,7 +26,7 @@ function AuthHeader({
       
 
   return (
-    <StyledHeader>
+    <header>
       <img src={logo} className="headerLogo"></img>
 
       <Navbar expand="lg" variant="light">
@@ -42,19 +34,14 @@ function AuthHeader({
         <Navbar.Brand href="#home"></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#"></Nav.Link>
-            <Nav.Link href="#"></Nav.Link>
-          </Nav>
-          <Nav className="mr-auto">
-            {/* <Link to="/">Home</Link> */}
+          <Nav>
             <Link to="/portal/jobs" className="headerLinks">Dashboard</Link>
             <Link to="/profile" className="headerLinks">Profile</Link>
-            <Button onClick={handleLogOut} className="headerButton">Log Out</Button>
+            <Button onClick={handleLogOut} className="headerBtn">Log Out</Button>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-    </StyledHeader>
+    </header>
   );
 }
 

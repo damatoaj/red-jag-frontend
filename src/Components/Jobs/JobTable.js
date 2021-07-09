@@ -23,28 +23,28 @@ function JobTable({ displayData, setSavedJobsArray }) {
             <Row>
                 <Col>
                     <a href="https://careers.google.com/" target="_blank">
-                        <Button className="applyButtons">
+                        <Button className="applyBtn">
                                 Apply on Google Careers
                         </Button>
                     </a>
                 </Col>
                 <Col>
                     <a href="https://www.linkedin.com/" target="_blank">
-                        <Button className="applyButtons">
+                        <Button className="applyBtn">
                             Apply on LinkedIn
                         </Button>
                     </a>
                 </Col>
                 <Col>
                     <a href="https://www.ziprecruiter.com/" target="_blank">
-                        <Button className="applyButtons">
+                        <Button className="applyBtn">
                         Apply on ZipRecruiter
                         </Button>
                     </a>
                 </Col>
                 <Col>
                     <a href="https://www.indeed.com" target="_blank">
-                        <Button className="applyButtons">
+                        <Button className="applyBtn">
                             Apply on Indeed
                         </Button>
                     </a>

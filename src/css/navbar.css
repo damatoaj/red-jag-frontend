@@ -1,12 +1,57 @@
+* {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a, a:hover, a:active {
+    text-decoration: none;
+}
+.applyBtn {
+    background-color: #86BBD8;
+    border-color: #86BBD8;
+    font-size: .8rem;
+    line-height: 2rem;
+    align-content: center;
+    text-align: center;
+    text-decoration: none;
+    margin: .5rem;
+    display: flex;
+    align-items: center;
+    letter-spacing: .05rem;
+    color: #FFFFFF;
+    width: 12rem;
+    height: 2rem;
+    transition: 1s ease;
+}
+
+.applyBtn:hover {
+    text-decoration: underline;
+}
+
+.card-title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 3em;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    color: #36393B;
+}
+
 .react-custom-scrollbars-fix::-webkit-scrollbar {
-    width: 7px;
+    width: .3rem;
   }
 
 /*called by JobsPortal.js*/
 .navbarContainer {
     margin: 0 auto;
-    background: #FFFFFF;
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
     padding: 1em;
     height: 10vh;
 }
@@ -18,20 +63,20 @@
 }
 
 .nav-tabs .nav-link, .nav-tabs .nav-link::after{
-    color: #540D6E;
     border-color: none;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.1px;
-    color: #540D6E;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.1rem;
     transition: 1s ease;
 }
 
 .nav-tabs .nav-link:hover{
     color:#540D6E;
+    background-color: white;
+    
 }
 
 
@@ -41,60 +86,16 @@
 
 /*called by JobDetails.js*/
 .jobCard {
-    /* background-color: yellow; */
+    background-color: none;
     align-content:center;
     justify-items: center;
+    margin: .3rem;
+    padding: .3rem;
+    transition: 1s ease;
 }
-
-.card:hover{
+.jobCard:hover{
     background-color:#86BBD8;
 }
-
-.card-title{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 3em;
-    display: flex;
-    align-items: center;
-    letter-spacing: 1px;
-    
-    color: #36393B;
-}
-
-/* styling component to be used with Form inline component, not form.group, inputgroup component
-.form-control{
-    width: 760px;
-    height: 33px;
-    left: 653px;
-    top: 165px;
-    
-    background: #FFFFFF;
-    border: 1px solid #ECECEC;
-    box-sizing: border-box;
-    border-radius: 20px;
-} */
-/*.jobCard .btn*/
- #star-btn {
-    color:grey;
-    align-content: center;
-    justify-content: center;
-    background-color: transparent;
-    padding: 0%;
-    margin: 0;
-    border-color: transparent;
-}
-
-#star-btn:hover{
-    color:red;
-}
-
-#star-btn:active{
-    color:blue;
-}
-
-
 
 #sort-btn{
     font-family: Montserrat;
@@ -170,77 +171,53 @@
     height: 10vh;
 }
 
-#title2_text{
+#jobColTitle{
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.1px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.05rem;
     color: #540D6E;
     text-align: center;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .card-text{
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
-    font-size: 10px;
+    font-size: .7rem;
     line-height: 1em;
     display: flex;
     align-items: flex-end;
-    letter-spacing: 1px;
+    letter-spacing: .1rem;
 
     color: #979797;
 }
 
 
 .jobColOne {
-    border: 2px solid grey;
     align-items:center;
     height: 100vh;
     overflow: auto;
     justify-content: stretch;
     align-content: center;
     justify-items: center;
-    background-color: green;
+    /* background-color: green; */
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
-
+    border: .1rem solid grey;
 }
 
 .jobColTwo {
     height:100vh;
-    border: 2px solid grey;
+    border: .1rem solid grey;
     overflow: auto;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
-
 }
 
-.applyButtons {
-    background-color: #86BBD8;
-    border-color: #86BBD8;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 66px;
-    align-content: center;
-    text-align: center;
-    text-decoration: none;
-    margin: .5rem;
-    /* identical to box height, or 660% */
-
-    display: flex;
-    align-items: center;
-    letter-spacing: 1px;
-
-    color: #FFFFFF;
-
-    width: 181px;
-    height: 35px;
-    left: 887px;
-    top: 401px;
-}
 
 
 /*called by JobTable*/
@@ -323,28 +300,22 @@
 
 }
 
-#track-btn {
+.trackBtn {
     color:grey;
-    align-content: center;
-    justify-content: center;
-    background-color: goldenrod;
-    padding: .3rem;
-    margin: 0;
-    border-color: transparent;
+    align-content: left;
+    justify-content: left;
+    padding: 0rem, 50px, 0rem, 0rem;
+    margin: 0, 50px, 0, 0;
+    border-color: purple;
+    background-color: transparent;
 }
 
-#track-btn:hover{
+.trackBtn:hover{
     color:purple;
+    background-color: transparent;
     transition: 1s ease;
 }
 
-#track-btn:active{
-    color:green;
-}
-a, a:hover, a:active {
-    text-decoration: none;
-}
-
 .profileIcon {
-    margin-top: 3rem;;
+    margin-top: 3rem;
 }

@@ -8,6 +8,18 @@
   font-weight: 600;
 }
 
+#appContainer {
+  width:100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.contentContainer {
+  width:100vw;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 body {
   --color-aqua: #00ffff;
   --color-blue-light: #86bbd8;
@@ -17,5 +29,4 @@ body {
   --color-grey: #979797;
   --color-grey-light: #ebedf0;
   --color-purple: #540d6e;
-  /* width: 100vw; */
 }

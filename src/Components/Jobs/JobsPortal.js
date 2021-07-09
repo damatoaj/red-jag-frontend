@@ -39,14 +39,14 @@ export default function NavbarPortal({ savedJobsArray }) {
 
     return (
         // <Container className="navbarContainer" fluid>
-        <Container className="navbarContainer">
+        <Container  className="navbarContainer">
           <Row>
             <Search setJobQuery={setJobQuery} />
           </Row>
           <Row className = "jobResultsRow">
             <Col className="jobColOne">
               <Row>
-                <h1 id= 'title2_text'>Job Openings</h1>
+                <h1 id='jobColTitle'>Job Openings</h1>
                 <JobDetails data={data} savedJobsArray={savedJobsArray}/>
               </Row>
             </Col>
