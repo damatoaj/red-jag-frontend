@@ -11,12 +11,12 @@ function JobTable({ displayData, setSavedJobsArray }) {
         <Container>
             <Row>
                 <Col>
-                    <h1 id = 'title_text'>{displayData.display[0].title}</h1>
-                    <p id = 'subtitletext_text'>{displayData.display[0].company_name}</p>
-                    <p id = 'subtitle_text'>{displayData.display[0].location}</p>
+                    <h1 id='titleText'>{displayData.display[0].title}</h1>
+                    <p className = 'subtitleText'>{displayData.display[0].company_name}</p>
+                    <p className = 'subtitleText'>{displayData.display[0].location}</p>
                 </Col>
                 <Col>
-                    <span id = 'subtitle2_text'>Posted {displayData.display[0].detected_extensions.posted_at}</span>
+                    <span id='subtitle2Text'>Posted {displayData.display[0].detected_extensions.posted_at}</span>
                     {/* <span id = 'subtitle3_text'><Button id="star-btn"><FaStar/></Button> Save</span> */}
                 </Col>
             </Row>

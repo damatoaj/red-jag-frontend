@@ -31,7 +31,7 @@ function DashBoardPortal({ currentUser }) {
                     </Row>
                     <Row className="profileIcon">
                         <Link to="/profile">
-                            <FaUser size={50}/>
+                            <FaUser size={50} className="icon" />
                         </Link>
                     </Row>
                 </Col>

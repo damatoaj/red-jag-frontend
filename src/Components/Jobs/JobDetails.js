@@ -19,11 +19,6 @@ export default function JobDetails({ data, savedJobsArray }) {
         };
     };
 
-    //todo get access to the entire object to pass to the saved
-    // rebecca updated visuals on "add to saved" button to be star button
-
-    //rebecca: star btn note - maybe change to toggle button that instantiates activeState from current saved jobs collection.
-    // can't set button to "selected/saved" color state attribute
     return data.jobs.map((job, index) => (
         <Card className="jobCard">
             <IconContext.Provider value={{className:'react-icons'}}>
@@ -35,9 +30,9 @@ export default function JobDetails({ data, savedJobsArray }) {
                             {/* <Button id="star-btn" onClick={(e)=> saveJobHandler(index)}>
                                  <FaStar size={20} />
                             </Button> */}
-                            <Button className="trackBtn" onClick={(e)=> saveJobHandler(index)}>
-                                <FaStar size={20} />  Trk
-                            </Button>
+                            <button className="trackBtn" onClick={(e)=> saveJobHandler(index)}>
+                                <FaStar size={20} />
+                            </button>
                         </Col>
 
                     </Row>

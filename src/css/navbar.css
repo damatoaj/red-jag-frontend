@@ -40,7 +40,7 @@ a, a:hover, a:active {
     line-height: 3em;
     display: flex;
     align-items: center;
-    letter-spacing: 1px;
+    letter-spacing: .1rem;
     text-decoration: underline;
     color: #36393B;
 }
@@ -79,12 +79,6 @@ a, a:hover, a:active {
     
 }
 
-
-/* .navbarContainer tabs {
-    
-} */
-
-/*called by JobDetails.js*/
 .jobCard {
     background-color: none;
     align-content:center;
@@ -111,59 +105,38 @@ a, a:hover, a:active {
     background-color: aliceblue;
 }
 
-#title_text{
+#titleText{
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 2rem;
     line-height: 1em;
-    /* or 367% */
-
+    margin-top: .5rem;
     display: flex;
     align-items: center;
-    letter-spacing: 1px;
-
+    letter-spacing: .1rem;
     color: #36393B;
+    text-decoration: underline;
 }
 
-#subtitle_text{
+.subtitleText{
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 1rem;
     line-height: 1em;
-    /* or 550% */
-
-    display: flex;
     align-items: center;
-    letter-spacing: 1px;
-
+    letter-spacing: .1rem;
     color: #979797;
     }
 
-#subtitle2_text{
+#subtitle2Text{
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
-    font-size: 10px;
-    line-height: 12px;
-    letter-spacing: 0.1px;
-
-    color: #979797;
-}
-
-#subtitle3_text{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 66px;
-    /* identical to box height, or 660% */
-
-    display: flex;
-    align-items: center;
-    letter-spacing: 1px;
-
+    font-size: .8rem;
+    line-height: 1rem;
+    letter-spacing: 0.05rem;
     color: #979797;
 }
 
@@ -194,7 +167,6 @@ a, a:hover, a:active {
     display: flex;
     align-items: flex-end;
     letter-spacing: .1rem;
-
     color: #979797;
 }
 
@@ -207,7 +179,7 @@ a, a:hover, a:active {
     align-content: center;
     justify-items: center;
     /* background-color: green; */
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, 0.1);
     border: .1rem solid grey;
 }
 
@@ -215,9 +187,26 @@ a, a:hover, a:active {
     height:100vh;
     border: .1rem solid grey;
     overflow: auto;
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
 }
 
+.searchButtons {
+    color:grey;
+    align-content: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 0%;
+    margin: 0;
+    border-color: transparent;
+}
+.searchButtons:hover{
+    color: #540D6E;
+    background-color: transparent;
+}
+
+.searchButtons:active {
+    color: #540D6E;
+    background-color: transparent;
+}
 
 
 /*called by JobTable*/
@@ -228,10 +217,9 @@ a, a:hover, a:active {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 0.1px;
-    
+    font-size: .8rem;
+    line-height: 1rem;
+    letter-spacing: .05rem;
     color: #646768;
 }
 
@@ -247,32 +235,27 @@ a, a:hover, a:active {
 .jobNavbar a:link, a:visited{
     position: sticky;
     height: 100%;
-    left: 21px;
-    top: 291px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
 
     background: #FFFFFF;
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
-
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 1.2rem;
+    line-height: 2rem;
     text-decoration: none;
     /* identical to box height */
-
-    letter-spacing: 0.1px;
+    letter-spacing: 0.1rem;
     text-align: center;
     color: #9F9F9F;
-
     }
       
 .jobNavbar a:hover, a:active {
     background: #86BBD8;
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
-    border-radius: 5px 0px 0px 5px;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+    border-radius: .8rem 0rem 0rem .8rem;
     color: #FFFFFF;
     text-decoration: none;
     transition: 1s ease;
@@ -285,17 +268,9 @@ a, a:hover, a:active {
     align-content: right;
 }
 
-.jobSearch .col-auto{
-    justify-content: left;
-    align-items: left;
-    align-content: left;
-
-}
-
 .JobTable .col{
     padding: 1em;
     height: 10vh;
-    background-color: orchid;
     box-shadow: -5px 0px 10px grey;
 
 }
@@ -306,7 +281,7 @@ a, a:hover, a:active {
     justify-content: left;
     padding: 0rem, 50px, 0rem, 0rem;
     margin: 0, 50px, 0, 0;
-    border-color: purple;
+    border: none;
     background-color: transparent;
 }
 
@@ -314,8 +289,34 @@ a, a:hover, a:active {
     color:purple;
     background-color: transparent;
     transition: 1s ease;
+    
 }
 
+.trackBtn:hover::after {
+    content: 'Save?';
+    font-size:1rem;
+}
+
+.trackBtn:active{
+    color:#86BBD8;
+    background-color: transparent;
+    box-shadow: 0 .1rem #86BBD8;
+    transition: .2s;
+}
+.trackBtn:active::after {
+    color: #86BBD8;
+    content: 'Ok!';
+    font-size:1rem;
+}
 .profileIcon {
     margin-top: 3rem;
+}
+
+.icon {
+    color: grey;
+    transition: .5s ease;
+}
+
+.icon:hover {
+    color: #86BBD8;
 }
