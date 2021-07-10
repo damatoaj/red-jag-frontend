@@ -100,7 +100,9 @@
 }
 
 .modal{
-    background-color: #86BBD8;
+    background-color: #86BBD880;
+    border-radius: 1rem;
+    transition: 1s ease;
 }
 
 #close-btn{
@@ -125,6 +127,7 @@
 .closeButtonIcon {
     width: 3vw;
     height: auto;
+    transition: .3s ease;
 }
 
 .closeButtonIcon:hover {

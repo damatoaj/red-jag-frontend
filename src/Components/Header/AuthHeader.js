@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "../../Images/TRKR.svg";
 import { Nav, Navbar, Button } from "react-bootstrap";
-import styled from "@emotion/styled";
 import { Link, Redirect } from 'react-router-dom';
 import '../../css/header.css'
 

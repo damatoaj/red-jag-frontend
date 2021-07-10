@@ -21,7 +21,15 @@ header{
     font-size: 1.5rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    transition: 1s ease;
+    transition: .1s ease;
+}
+
+.headerLinks, a:hover, a:active{
+    color:#540D6E;
+}
+
+.headerLinks:active {
+    color: black;
 }
 
 .headerLogo {

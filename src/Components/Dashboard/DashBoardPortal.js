@@ -26,7 +26,6 @@ function DashBoardPortal({ currentUser }) {
             <Row>
                 <Col xs='2'>
                     <Row>
-                    {/* '''calls DashbBoardNav which creates the NavBar() object the NavBar()''' */}
                         <DashBoardNav />
                     </Row>
                     <Row className="profileIcon">
