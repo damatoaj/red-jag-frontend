@@ -76,7 +76,6 @@ a, a:hover, a:active {
 .nav-tabs .nav-link:hover{
     color:#540D6E;
     background-color: white;
-    
 }
 
 .jobCard {
@@ -99,7 +98,6 @@ a, a:hover, a:active {
     line-height: 17px;
     letter-spacing: 0.1px;
     color: #540D6E;
-
     border-color: #bcd6e4;
     border-width: .1em;
     background-color: aliceblue;

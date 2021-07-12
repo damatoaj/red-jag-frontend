@@ -47,7 +47,7 @@ export default function TodoPortal({ currentUser }) {
     };
 
     return (
-        <Container className = "todoBox2">
+        <Container className="todoBox2">
             <Row>
                 <TodoForm 
                     setTodoArray={setTodoArray} 

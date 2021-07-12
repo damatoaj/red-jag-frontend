@@ -6,16 +6,22 @@
     box-sizing: border-box;
 }
 
-.todoCard {
-    margin-right: 1rem;
-    padding: 1rem;
-    width: 100%
+.displayTodo {
+    border-left: #9F9F9F;
+    border-width: 1rem;
 }
 
-.todoCard.complete {
-    margin-right: 1rem;
-    padding: 1rem;
-    width: 100%
+.displayTodoTitle {
+    color: #540D6E;
+    text-decoration: #540D6E underline;
+}
+
+.jobFormInput{
+    width: 50vw;
+}
+
+.jobFormButton{
+    width: 10vw;
 }
 
 .todoBox1{
@@ -27,7 +33,7 @@
     /* identical to box height */
 
     letter-spacing: 0.1rem;
-
+    border-bottom: .1rem solid grey;
     color: #9F9F9F;
     width: 100%;
     display: flex;
@@ -37,38 +43,66 @@
 }
 
 .todoBox2{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
     font-size: 1rem;
     line-height: 1.5rem;
     /* identical to box height */
-
     letter-spacing: 0.1rem;
-    border-left: 1rem solid #9F9F9F;
+    border: .1rem solid #9F9F9F;
     color: #9F9F9F;
 }
 
-.todoTitle{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 2rem;
-    line-height: 1.5rem;
-    /* identical to box height */
-    text-align: center;
-    letter-spacing: 0.1rem;
-    color: #540D6E;
-    background-color: transparent;
-    text-decoration: #540D6E underline;
+.todoButtons {
+    background-color: #540D6E;
+    border: .1rem solid #540D6E;
+    border-radius: .5rem;
+    margin: .3rem;
+    width: 8vw;
+    box-shadow: none;
+    color: white;
+    height: 5vh;
 }
 
-.jobFormInput{
-    width: 50vw;
+.todoButtons:hover {
+    color:#540D6E;
+    background-color: white;
+    border: .1rem solid #540D6E;
+    transition: .5s ease;
 }
 
-.jobFormButton{
-    width: 10vw;
+.todoButtons:active {
+    color:#540D6E;
+    background-color: white;
+    border: .1rem solid #540D6E;
+    transform: translateY(.5rem);
+    transition: .2s ease;
+}
+
+.todoCard {
+    margin-right: 1rem;
+    padding: 1rem;
+    width: 100%
+}
+
+.todoCard.complete {
+    margin-right: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.todoContainer {
+    margin-right: 1rem;
+    padding: 1rem;
+    width: 100%;
+    transition: .5s ease;
+}
+
+.todoContainer:hover {
+    background-color: #86BBD8;
+}
+
+.todoContainer.selected {
+    background-color: #00ffff;
+    border: .1rem solid grey;
 }
 
 .todoCol1{
@@ -83,53 +117,52 @@
     padding: 1rem;
 }
 
-.todoListView {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: center;
+.todoLabel {
+    font-size: 1.2rem;
+    text-decoration: #d90000 underline;
+    color: #d90000;
+    text-align: center;
 }
 
-.displayTodo {
-    border-left: #9F9F9F;
-    border-width: 1rem;
-}
 
-.todoButtons {
-    background-color: #540D6E;
-    border: .1rem solid #540D6E;
-    border-radius: .5rem;
-    margin: .3rem;
-    width: 8vw;
-}
-
-.todoButtons:hover {
-    color:#540D6E;
-    background-color: white;
-    border: .1rem solid #540D6E;
-    transition: .5s ease;
+.todoLabel.complete {
+    text-decoration: #75b204 line-through;
+    color: #75b204;
 }
 
 .todoListText {
     font-size: 1rem;
     text-align: center;
     padding: .3rem;
+    color: #d90000;
 }
 
-.todoLabel {
-    font-size: 1.2rem;
-    text-decoration: #9F9F9F underline;
-    color: #9F9F9F;
+.todoListText.complete{
+    color: #75b204;
+}
+
+.todoTitle{
+    font-size: 2rem;
+    line-height: 1.5rem;
+    /* identical to box height */
     text-align: center;
-}
-
-.todoList {
-    place-items: left;
-    padding: 0;
-}
-
-.displayTodoTitle {
+    letter-spacing: 0.1rem;
     color: #540D6E;
+    background-color: transparent;
     text-decoration: #540D6E underline;
+}
+
+.todoListView {
+    border-left: .1rem solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+
+@keyframes selectBorder {
+    0% {background-color:#540d6e;}
+    25% {background-color: #d90000;}
+    50% {background-color: #75b204;}
+    75% {background-color: #ffae00;}
 }

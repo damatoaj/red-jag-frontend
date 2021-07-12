@@ -1,3 +1,10 @@
+* {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
 .demoMap {
     width:100%;
 }

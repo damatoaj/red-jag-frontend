@@ -53,9 +53,9 @@ export default function TodoForm({
               />
             </Col>
             <Col>
-              <Button onClick={submitTodoHandler} className="todoButtons">
+              <button onClick={submitTodoHandler} className="todoButtons">
                 Create
-              </Button>
+              </button>
             </Col>
           </Row>
         </Form.Group>

@@ -1,3 +1,10 @@
+* {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
 .authButton {
     background-color: #540D6E;
     padding: .5rem;

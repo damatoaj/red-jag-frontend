@@ -1,3 +1,10 @@
+* {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
 header{
     display: flex;
     justify-content: space-between;
@@ -5,9 +12,6 @@ header{
 }
 
 .showUsername{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
     font-size: 2rem;
     line-height: 1.5rem;
     letter-spacing: .1rem;
@@ -48,9 +52,6 @@ header{
     height: 7vh;
     border-radius: .1rem;
     cursor:pointer;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
     border: .1rem solid black;
